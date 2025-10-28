@@ -1,0 +1,28 @@
+data:
+  augmentation: null
+  batch_size: 128
+  dataset: MNIST
+  transform: standardize
+logger:
+  entity: your_wandb_entity
+  project: pytorch-lightning-uv
+  run_name: test_run
+model:
+  activation: relu
+  dropout: 0.2
+  efficient_version: null
+  n_channels_1: null
+  n_channels_2: null
+  n_fc_1: null
+  n_layer_1: null
+  n_layer_2: null
+  name: MLP
+  unfreeze_layers: null
+optimizer:
+  lr: 0.0001
+  name: adam
+training:
+  accumulate_grad_batches: null
+  gradient_clip_val: null
+  max_epochs: 25
+  precision: null
