@@ -1,18 +1,38 @@
-# Minimal config for benchmarking LLaVA-OneVision
-data:
-  path: data/examples.csv          # CSV with image_paths,prompt,answer (answer optional)
-  multi_image: false               # set true to test multi-image
-
+# LLaVA OV Qwen2 0.5B benchmarking config
 model:
-  model_id: llava-hf/llava-onevision-qwen2-0.5b-ov-hf  # use *ov* for multi-image/video
-  dtype: fp16                       # fp32|fp16|bf16
-  quantization: none                # none|bnb-int8|bnb-int4
-  bnb_4bit_compute_dtype: bf16
-  max_new_tokens: 64
-  temperature: 0.0
-  top_p: 1.0
-  pad_token_left: true              # recommended for batched gen
+  model_id: llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+  dtype: bf16            # one of: bf16, fp16, fp32
+  device_map: auto       # "auto" recommended
+  use_flash_attn_2: false  # set true if flash-attn is installed
+  attn_implementation: sdpa  # sdpa|flash_attention_2 (overridden if use_flash_attn_2=true)
 
-runtime:
-  runs: 5
-  warmup_runs: 1
+quantization:
+  mode: none             # one of: none, bnb-8bit, bnb-4bit
+  bnb_4bit_compute_dtype: bf16
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+
+generation:
+  max_new_tokens: 128
+  temperature: 0.0       # 0.0 => greedy
+  top_p: 0.9
+  num_beams: 1
+  repetition_penalty: 1.0
+
+data:
+  csv_path: data/examples.csv
+  image_delimiter: ";"
+  image_base: ""         # optional prefix for relative paths
+  prompt_column: prompt
+  answer_column: answer
+  image_paths_column: image_paths
+
+inference:
+  batch_size: 2          # prompts per batch; keep small for multi-image
+  pad_side_left: true    # per HF docs, improves batched gen accuracy
+  seed: 123
+
+logging:
+  out_dir: runs/llava_ov_qwen05
+  save_generations_csv: true
+  save_jsonl: true

@@ -1,0 +1,10 @@
+row_index,image_paths,prompt,gold,prediction,exact_match,f1,preproc_ms,generate_ms,new_tokens
+0,data/images/supercars.jpg,How many cars are there?,two,"user 
+How many cars are there?assistant
+There are four sports cars parked in a row in the image.",0.0,0.0,57.71435200585984,17529.165565996664,128
+1,data/images/supercars.jpg;data/images/hypercars.jpg,Which cars appear in both images?,none,"user 
+Which cars appear in both images?assistant
+The image shows a variety of sports cars, including a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Ch",0.0,0.0,57.71435200585984,17529.165565996664,128
+2,data/images/supercars.jpg;data/images/hypercars.jpg,Which cars brands are in the images?,...,"user 
+Which cars brands are in the images?assistant
+The image shows a variety of sports cars, including a Bugatti Chiron, a Bugatti Chiron, a Bugatti Veyron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti Chiron, a Bugatti",0.0,0.0,21.899523999309167,4968.621563006309,128
