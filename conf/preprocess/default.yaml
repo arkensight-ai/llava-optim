@@ -1,0 +1,3 @@
+max_image_side: 640
+# multi-image mode default is per-image list (your preferred default).
+# If you later add a "video" hack path, you can switch here via a flag and wire it in data_loading.

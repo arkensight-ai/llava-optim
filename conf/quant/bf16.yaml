@@ -1,0 +1,2 @@
+name: bf16
+torch_dtype: bf16

@@ -1,0 +1,4 @@
+max_new_tokens: 256
+do_sample: false
+top_p: 0.9
+seed: 0

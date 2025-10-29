@@ -1,0 +1,15 @@
+csv: data/examples.csv
+out_jsonl: outputs/run.jsonl
+limit: null
+model:
+  model_id: llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+quant:
+  name: fp16
+  torch_dtype: fp16
+gen:
+  max_new_tokens: 256
+  do_sample: false
+  top_p: 0.9
+  seed: 0
+preprocess:
+  max_image_side: 640

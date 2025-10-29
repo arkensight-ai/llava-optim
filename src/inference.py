@@ -1,39 +1,72 @@
 
 from __future__ import annotations
-from typing import Dict, Tuple, Any, List
-import time
+from typing import Dict, Tuple, Any, Optional
 import torch
-from PIL import Image
+import time
 from transformers import (
     BitsAndBytesConfig,
     LlavaOnevisionForConditionalGeneration,
     LlavaOnevisionProcessor,
 )
 
+def _maybe_dtype(name: Optional[str]) -> Optional[torch.dtype]:
+    if not name:
+        return None
+    name = str(name).lower()
+    if name in ("fp16", "float16", "torch.float16"):
+        return torch.float16
+    if name in ("bf16", "bfloat16", "torch.bfloat16"):
+        return torch.bfloat16
+    if name in ("fp32", "float32", "torch.float32"):
+        return torch.float32
+    return None
+
 def load_model(
     model_id: str,
-    four_bit: bool,
+    four_bit: Optional[bool] = None,               # legacy path (still works)
+    quant: Optional[Dict[str, Any]] = None,        # new Hydra path
 ) -> Tuple[LlavaOnevisionForConditionalGeneration, LlavaOnevisionProcessor]:
-    quantization_config = None
-    if four_bit:
-        quantization_config = BitsAndBytesConfig(
+
+    # If `quant` provided (Hydra), use it; otherwise keep legacy behavior
+    if quant is None:
+        quant = {}
+        if four_bit:
+            quant.update(dict(
+                name="bnb4_nf4",
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype="fp16",
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_use_double_quant=True,
+            ))
+        else:
+            quant.update(dict(name="fp16", dtype="fp16"))
+
+    name = str(quant.get("name", "fp16")).lower()
+    dtype = _maybe_dtype(quant.get("dtype"))
+
+    # Build kwargs for from_pretrained
+    from_kwargs: Dict[str, Any] = dict(device_map="auto")
+
+    if name.startswith("bnb4") or quant.get("load_in_4bit", False):
+        bnb = BitsAndBytesConfig(
             load_in_4bit=True,
-            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_compute_dtype=_maybe_dtype(quant.get("bnb_4bit_compute_dtype")) or torch.bfloat16,
+            bnb_4bit_use_double_quant=bool(quant.get("bnb_4bit_use_double_quant", True)),
+            bnb_4bit_quant_type=str(quant.get("bnb_4bit_quant_type", "nf4")),
         )
-
-    if four_bit:
-        model = LlavaOnevisionForConditionalGeneration.from_pretrained(
-            model_id,
-            quantization_config=quantization_config,
-            device_map="auto",
-        )
+        from_kwargs["quantization_config"] = bnb
+    elif name in ("bnb8", "int8") or quant.get("load_in_8bit", False):
+        from_kwargs["load_in_8bit"] = True
     else:
-        model = LlavaOnevisionForConditionalGeneration.from_pretrained(
-            model_id,
-            dtype=torch.float16,
-            device_map="auto",
-        )
+        # default: fp16/bf16/fp32
+        if dtype is None:
+            dtype = torch.float16
+        from_kwargs["dtype"] = dtype
 
+    model = LlavaOnevisionForConditionalGeneration.from_pretrained(
+        model_id,
+        **from_kwargs,
+    )
     processor = LlavaOnevisionProcessor.from_pretrained(model_id)
     processor.tokenizer.padding_side = "left"
     model.eval()
