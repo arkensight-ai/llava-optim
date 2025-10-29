@@ -7,9 +7,9 @@ SRC_ROOT = os.path.dirname(FILE_DIR)  # points to .../src
 if SRC_ROOT not in sys.path:
     sys.path.insert(0, SRC_ROOT)
 
-from llava.inference import load_model, generate_single_with_stats
-from llava.data_loading import prepare_inputs_from_csv
-from llava.benchmark import pretty_print_stats, write_stats_jsonl
+from inference import load_model, generate_single_with_stats
+from data_loading import prepare_inputs_from_csv
+from benchmark import pretty_print_stats, write_stats_jsonl
 
 def parse_args():
     p = argparse.ArgumentParser(description="Run LLaVA OneVision on a CSV of prompts/images, with profiling.")
