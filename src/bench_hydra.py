@@ -7,7 +7,7 @@ import hydra
 from hydra.core.hydra_config import HydraConfig
 import torch
 
-from inference import load_model, generate_single_with_stats
+from inference import load_model, generate_batch_with_stats
 from data_loading import prepare_inputs_from_csv
 from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
 
@@ -50,32 +50,41 @@ def main(cfg: DictConfig) -> None:
     # Loop
     samples: list[SampleRow] = []
 
-    for idx in range(len(model_prompts)):
-        pred, s = generate_single_with_stats(
+    bs = int(cfg.gen.batch_size)
+
+    for start in range(0, len(model_prompts), bs):
+        end = min(start + bs, len(model_prompts))
+        imgs_chunk = images_batch[start:end]
+        prom_chunk = model_prompts[start:end]
+
+        preds, stats_list = generate_batch_with_stats(
             model=model,
             processor=processor,
-            images_for_prompt=images_batch[idx],
-            model_prompt=model_prompts[idx],
-            max_new_tokens=cfg.gen.max_new_tokens,
-            do_sample=cfg.gen.do_sample,
-            top_p=cfg.gen.top_p,
+            images_batch=imgs_chunk,
+            model_prompts=prom_chunk,
+            max_new_tokens=int(cfg.gen.max_new_tokens),
+            do_sample=bool(cfg.gen.do_sample),
+            top_p=float(cfg.gen.top_p),
+            temperature=float(getattr(cfg.gen, "temperature", 1.0)),
         )
 
-        row = SampleRow(
-            idx=idx,
-            user_prompt=user_prompts[idx],
-            gt=answers[idx],
-            pred=pred,
-            n_images=s["n_images"],
-            input_tokens=int(s["input_tokens"]),
-            output_tokens=int(s["output_tokens"]),
-            t_encode_s=float(s["time_s"].get("encode", 0.0)),
-            t_generate_s=float(s["time_s"].get("generate", 0.0)),
-            t_decode_s=float(s["time_s"].get("decode", 0.0)),
-            t_total_s=float(s["t_total_s"]),
-            tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
-        )
-        samples.append(row)
+        for j, (pred, s) in enumerate(zip(preds, stats_list)):
+            idx = start + j
+            row = SampleRow(
+                idx=idx,
+                user_prompt=user_prompts[idx],
+                gt=answers[idx],
+                pred=pred,
+                n_images=int(s["n_images"]),
+                input_tokens=int(s["input_tokens"]),
+                output_tokens=int(s["output_tokens"]),
+                t_encode_s=float(s["time_s"].get("encode", 0.0)),
+                t_generate_s=float(s["time_s"].get("generate", 0.0)),
+                t_decode_s=float(s["time_s"].get("decode", 0.0)),
+                t_total_s=float(s["t_total_s"]),
+                tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
+            )
+            samples.append(row)
 
         # Printing (verbosity)
         if cfg.verbosity.print.per_sample:

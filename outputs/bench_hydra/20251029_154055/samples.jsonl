@@ -1,0 +1,2 @@
+{"idx": 3, "user_prompt": "Which image has more cars?", "gt": "...", "pred": "yes", "n_images": 2, "input_tokens": 1474, "output_tokens": 218, "t_encode_s": 0.116034898, "t_generate_s": 7.043613487, "t_decode_s": 0.000788268, "t_total_s": 7.160436653, "tokens_per_s": 30.950023081526307}
+{"idx": 7, "user_prompt": "Which image has more cars?", "gt": "...", "pred": "yes", "n_images": 2, "input_tokens": 1474, "output_tokens": 218, "t_encode_s": 0.116073413, "t_generate_s": 6.583605889, "t_decode_s": 0.000598561, "t_total_s": 6.700277863, "tokens_per_s": 33.11255316243004}

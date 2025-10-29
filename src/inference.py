@@ -182,3 +182,91 @@ def generate_single_with_stats(
         "tokens_per_s": tps,
     }
     return pred, stats
+
+def _token_lengths(input_ids: torch.Tensor, pad_id: int) -> List[int]:
+    # counts non-pad tokens per row
+    return (input_ids != pad_id).sum(dim=1).tolist()
+
+@torch.inference_mode()
+def generate_batch_with_stats(
+    model,
+    processor,
+    images_batch: List[List["PIL.Image.Image"]],
+    model_prompts: List[str],
+    max_new_tokens: int = 256,
+    do_sample: bool = False,
+    top_p: float = 0.9,
+    temperature: float = 1.0,
+) -> tuple[list[str], list[Dict[str, Any]]]:
+    """
+    images_batch: list of samples, each sample is a list of PIL images (same count across samples)
+    model_prompts: list of already-templated texts (same length as images_batch)
+    """
+    assert len(images_batch) == len(model_prompts), "images and prompts must align"
+    bs = len(model_prompts)
+    if bs == 0:
+        return [], []
+
+    # --- simple compatibility checks (fail fast) ---
+    n_imgs = len(images_batch[0])
+    if not all(len(x) == n_imgs for x in images_batch):
+        raise ValueError("For simple batching, all samples in a batch must have the same number of images.")
+
+    timer = PhaseTimer()
+
+    # Encode
+    timer.start("encode")
+    enc = processor(
+        text=model_prompts,
+        images=images_batch,           # list[list[PIL.Image]]
+        padding=True,                  # pad text to max length in the batch
+        return_tensors="pt",
+    )
+    # BatchEncoding supports .to(device)
+    enc = enc.to(model.device)
+    timer.stop("encode")
+
+    # Generate
+    timer.start("generate")
+    gen_out = model.generate(
+        **enc,
+        use_cache=True,
+        max_new_tokens=max_new_tokens,
+        do_sample=do_sample,
+        top_p=top_p,
+        temperature=temperature,
+    )
+    timer.stop("generate")
+
+    # Decode
+    timer.start("decode")
+    pad_id = processor.tokenizer.pad_token_id
+    input_lens = _token_lengths(enc["input_ids"], pad_id=pad_id)  # per-sample prompt lengths
+    preds: list[str] = []
+    inp_tok: list[int] = []
+    out_tok: list[int] = []
+
+    for i, L in enumerate(input_lens):
+        new_tokens = gen_out[i, L:]  # slice off the prompt
+        text = processor.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        preds.append(text)
+        inp_tok.append(int(L))
+        out_tok.append(int(new_tokens.shape[0]))
+    timer.stop("decode")
+
+    gen_s = timer.elapsed_s.get("generate", 0.0)
+    total_s = sum(timer.elapsed_s.get(k, 0.0) for k in ("encode", "generate", "decode"))
+    stats = []
+    for i in range(bs):
+        tps = (out_tok[i] / gen_s) if gen_s > 0 else float("nan")
+        stats.append({
+            "time_s": dict(timer.elapsed_s),
+            "n_images": n_imgs,
+            "input_tokens": inp_tok[i],
+            "output_tokens": out_tok[i],
+            "t_total_s": total_s,
+            "tokens_per_s": tps,
+        })
+
+    return preds, stats
+

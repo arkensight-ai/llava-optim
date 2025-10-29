@@ -1,0 +1,15 @@
+{
+  "python": "3.12.12",
+  "platform": "Linux-5.10.0-33-cloud-amd64-x86_64-with-glibc2.31",
+  "torch": "2.5.0+cu121",
+  "cuda_available": true,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "total_mem_gb": 14.57,
+      "cc": "7.5"
+    }
+  ],
+  "git_commit": "5965005fd8f42e13baa4cefd8ba3a83e151780a9"
+}

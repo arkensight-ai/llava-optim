@@ -7,6 +7,6 @@ defaults:
   - verbosity: default
   - hydra: default
 
-csv: data/examples.csv
+csv: data/batches.csv
 out_jsonl: outputs/run.jsonl   # legacy; still supported (will be written if set)
 limit: null

@@ -1,0 +1,2 @@
+run_id,model_id,quant_name,batch_size,n_samples,sum_output_tokens,mean_output_tokens,mean_t_generate_s,p50_ttft_s,p95_ttft_s,p50_t_total_s,p95_t_total_s,aggregate_tokens_per_s,mean_tokens_per_s
+run.jsonl,unknown,unknown,,12,0,0.0,,,,,,,
