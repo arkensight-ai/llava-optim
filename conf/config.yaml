@@ -1,13 +1,12 @@
-# conf/config.yaml
 defaults:
-  - _self_                # <-- add this
+  - _self_
   - model: llava_qwen2_0_5b
   - quant: fp16
   - gen: default
   - preprocess: default
+  - verbosity: default
   - hydra: default
 
-# I/O
 csv: data/examples.csv
-out_jsonl: outputs/run.jsonl
+out_jsonl: outputs/run.jsonl   # legacy; still supported (will be written if set)
 limit: null

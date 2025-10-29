@@ -10,3 +10,216 @@
 {"sample": 1, "question": "Describe what you see.", "ground_truth": "...", "prediction": "The image features a sleek, sleek, and sleek black Bentley Continental GT car, a luxury sports car known for its powerful engine and luxurious interior. The car is parked on a paved road, with a backdrop of a modern building and a lush green lawn. The car's polished exterior reflects the surrounding environment, highlighting its polished finish.", "stats": {"num_images": 2, "per_image_tiles": [{"image_index": 0, "orig_size_wh": [640, 360], "tiles": 1, "vision_tokens": 256}, {"image_index": 1, "orig_size_wh": [640, 410], "tiles": 1, "vision_tokens": 256}], "expected_total_tiles_individual": 2, "expected_total_vision_tokens_individual": 512, "pixel_values_shape": [2, 1, 3, 384, 384], "image_sizes_shape": [2, 2], "actual_total_tiles_in_batch": 2, "actual_total_vision_tokens_in_batch": 512, "tokens_per_tile": 256, "pre_expansion_text_tokens": 15, "prompt_tokens_after_expansion": 1473, "new_tokens_generated": 67, "tokens_per_second": 12.292543359968782, "prep_time_s": 0.03163780501927249, "move_to_device_time_s": 0.001314808992901817, "generate_time_s": 5.450458708015503, "total_time_s": 5.483411322027678, "oom": false}}
 {"sample": 2, "question": "How many cars do you see?", "ground_truth": "2", "prediction": "There are two cars in the image.", "stats": {"num_images": 2, "per_image_tiles": [{"image_index": 0, "orig_size_wh": [640, 360], "tiles": 1, "vision_tokens": 256}, {"image_index": 1, "orig_size_wh": [640, 295], "tiles": 1, "vision_tokens": 256}], "expected_total_tiles_individual": 2, "expected_total_vision_tokens_individual": 512, "pixel_values_shape": [2, 1, 3, 384, 384], "image_sizes_shape": [2, 2], "actual_total_tiles_in_batch": 2, "actual_total_vision_tokens_in_batch": 512, "tokens_per_tile": 256, "pre_expansion_text_tokens": 17, "prompt_tokens_after_expansion": 1475, "new_tokens_generated": 9, "tokens_per_second": 5.198192096723783, "prep_time_s": 0.02695795099134557, "move_to_device_time_s": 0.001253238006029278, "generate_time_s": 1.7313711830065586, "total_time_s": 1.7595823720039334, "oom": false}}
 {"sample": 3, "question": "Detect and list all the colors of the cars shown in the images.", "ground_truth": "...", "prediction": "The image shows a variety of cars in different colors: white, white, white, blue, black, yellow, blue, yellow, black, blue, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow", "stats": {"num_images": 2, "per_image_tiles": [{"image_index": 0, "orig_size_wh": [640, 360], "tiles": 1, "vision_tokens": 256}, {"image_index": 1, "orig_size_wh": [640, 360], "tiles": 1, "vision_tokens": 256}], "expected_total_tiles_individual": 2, "expected_total_vision_tokens_individual": 512, "pixel_values_shape": [2, 1, 3, 384, 384], "image_sizes_shape": [2, 2], "actual_total_tiles_in_batch": 2, "actual_total_vision_tokens_in_batch": 512, "tokens_per_tile": 256, "pre_expansion_text_tokens": 24, "prompt_tokens_after_expansion": 1482, "new_tokens_generated": 256, "tokens_per_second": 14.51968845411193, "prep_time_s": 0.026552800001809373, "move_to_device_time_s": 0.0013278000114951283, "generate_time_s": 17.631232296000235, "total_time_s": 17.65911289601354, "oom": false}}
+idx: 0
+sample:
+  idx: 0
+  user_prompt: How many cars are there in the image?
+  gt: '4'
+  pred: "user \nHow many cars are there in the image?assistant\nThere are four sports\
+    \ cars parked in a row in the image."
+  n_images: 1
+  input_tokens: 2069
+  output_tokens: 14
+  t_encode_s: 0.040463644
+  t_generate_s: 1.458870975
+  t_decode_s: 0.000544202
+  t_total_s: 1.499878821
+  tokens_per_s: 9.596462086031975
+idx: 1
+sample:
+  idx: 1
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: "user \nDescribe what you see.assistant\nThe image captures a moment of tranquility\
+    \ and speed, as a sleek, sleek, and powerful sports car, a Porsche Cayenne, is\
+    \ captured in motion on a winding road. The car, painted in a glossy black, is\
+    \ a striking contrast against the backdrop of a gray road. The car's black exterior\
+    \ is accentuated by its silver rims and the red brake calipers, adding a touch\
+    \ of elegance and luxury. The car is positioned in the center of the frame, moving\
+    \ towards the right side of the image, suggesting a sense of forward motion. The\
+    \ license plate of the car reads \"9119 919\", a detail that adds to its distinctive\
+    \ look. The background is a serene setting of lush green trees and a building\
+    \ with a sign that reads \"BENTLEY DUSSELDORF\", indicating the location. The\
+    \ car's position on the road and the surrounding greenery create a harmonious\
+    \ blend of technology and nature."
+  n_images: 2
+  input_tokens: 4664
+  output_tokens: 193
+  t_encode_s: 0.092797371
+  t_generate_s: 7.763085472
+  t_decode_s: 0.000757284
+  t_total_s: 7.856640127
+  tokens_per_s: 24.861248880501826
+idx: 2
+sample:
+  idx: 2
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: "user \nHow many cars do you see?assistant\nThe image shows a single car,\
+    \ a Porsche Panamera, which is a luxury sports car."
+  n_images: 2
+  input_tokens: 4171
+  output_tokens: 20
+  t_encode_s: 0.061736323
+  t_generate_s: 2.513766423
+  t_decode_s: 0.000581773
+  t_total_s: 2.5760845189999997
+  tokens_per_s: 7.956188696375153
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Detect and list all the colors of the cars shown in the images.
+  gt: '...'
+  pred: "user \nDetect and list all the colors of the cars shown in the images.assistant\n\
+    The image shows a line-up of four sports cars parked in a row on a track. The\
+    \ first car is a white Porsche 911, followed by a blue Bugatti Chiron, a black\
+    \ Bugatti Chiron, a black and orange Bugatti Chiron, and a yellow Bugatti Chiron."
+  n_images: 2
+  input_tokens: 4126
+  output_tokens: 64
+  t_encode_s: 0.059863519
+  t_generate_s: 3.694815587
+  t_decode_s: 0.000613275
+  t_total_s: 3.755292381
+  tokens_per_s: 17.321568152191517
+idx: 0
+sample:
+  idx: 0
+  user_prompt: How many cars are there in the image?
+  gt: '4'
+  pred: "user \nHow many cars are there in the image?assistant\nThere are four sports\
+    \ cars parked in a row in the image."
+  n_images: 1
+  input_tokens: 2069
+  output_tokens: 14
+  t_encode_s: 0.034363326
+  t_generate_s: 1.454980717
+  t_decode_s: 0.000470473
+  t_total_s: 1.489814516
+  tokens_per_s: 9.622120648352208
+idx: 1
+sample:
+  idx: 1
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: "user \nDescribe what you see.assistant\nThe image captures a moment of tranquility\
+    \ and speed, as a sleek, sleek, and powerful sports car, a Porsche Cayenne, is\
+    \ captured in motion on a winding road. The car, painted in a glossy black, is\
+    \ a striking contrast against the backdrop of a gray road. The car's black exterior\
+    \ is accentuated by its silver rims and the red brake calipers, adding a touch\
+    \ of elegance and luxury. The car is positioned in the center of the frame, moving\
+    \ towards the right side of the image, suggesting a sense of forward motion. The\
+    \ license plate of the car reads \"9119 919\", a detail that adds to its distinctive\
+    \ look. The background is a serene setting of lush green trees and a building\
+    \ with a sign that reads \"BENTLEY DUSSELDORF\", indicating the location. The\
+    \ car's position on the road and the surrounding greenery create a harmonious\
+    \ blend of technology and nature."
+  n_images: 2
+  input_tokens: 4664
+  output_tokens: 193
+  t_encode_s: 0.09132711
+  t_generate_s: 7.812800033
+  t_decode_s: 0.000786432
+  t_total_s: 7.904913575
+  tokens_per_s: 24.70305129848445
+idx: 2
+sample:
+  idx: 2
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: "user \nHow many cars do you see?assistant\nThe image shows a single car,\
+    \ a Porsche Panamera, which is a luxury sports car."
+  n_images: 2
+  input_tokens: 4171
+  output_tokens: 20
+  t_encode_s: 0.06271497
+  t_generate_s: 2.524097419
+  t_decode_s: 0.000600801
+  t_total_s: 2.58741319
+  tokens_per_s: 7.923624440741128
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Detect and list all the colors of the cars shown in the images.
+  gt: '...'
+  pred: "user \nDetect and list all the colors of the cars shown in the images.assistant\n\
+    The image shows a line-up of four sports cars parked in a row on a track. The\
+    \ first car is a white Porsche 911, followed by a blue Bugatti Chiron, a black\
+    \ Bugatti Chiron, a black and orange Bugatti Chiron, and a yellow Bugatti Chiron."
+  n_images: 2
+  input_tokens: 4126
+  output_tokens: 64
+  t_encode_s: 0.060775367
+  t_generate_s: 3.680638082
+  t_decode_s: 0.00064374
+  t_total_s: 3.742057189
+  tokens_per_s: 17.388289360203384
+idx: 0
+sample:
+  idx: 0
+  user_prompt: How many cars are there in the image?
+  gt: '4'
+  pred: "user \nHow many cars are there in the image?assistant\nThere are four sports\
+    \ cars parked in a row in the image."
+  n_images: 1
+  input_tokens: 2069
+  output_tokens: 14
+  t_encode_s: 0.035073823
+  t_generate_s: 2.91242949
+  t_decode_s: 0.00041354
+  t_total_s: 2.947916853
+  tokens_per_s: 4.806983327174042
+idx: 1
+sample:
+  idx: 1
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: "user \nDescribe what you see.assistant\nThe image captures a moment of tranquility\
+    \ and speed, as a sleek, sleek, and powerful sports car, a Porsche Cayman S, is\
+    \ captured in motion on a winding road. The car, painted in a glossy black color,\
+    \ is a striking contrast against the backdrop of a lush green landscape. The car's\
+    \ black rims and silver rims add to its sleek design, while the black roof and\
+    \ side mirrors add a touch of elegance. The car is positioned in the center of\
+    \ the frame, moving towards the right side of the image, as if ready to speed\
+    \ off into the distance. The background is a serene setting of a lush green field\
+    \ and a building with a sign that reads \"BENTLEY DUSSELDORF\", suggesting a location\
+    \ that is both stylish and luxurious. The car's position on the road and the car's\
+    \ dynamic motion create a sense of speed and excitement."
+  n_images: 2
+  input_tokens: 4664
+  output_tokens: 179
+  t_encode_s: 0.081137748
+  t_generate_s: 25.920784579
+  t_decode_s: 0.00070628
+  t_total_s: 26.002628607
+  tokens_per_s: 6.905655168517498
+idx: 2
+sample:
+  idx: 2
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: "user \nHow many cars do you see?assistant\nThe image features a sleek, sleek,\
+    \ and sleek Porsche 911 with a sleek, black exterior and a glossy finish."
+  n_images: 2
+  input_tokens: 4171
+  output_tokens: 27
+  t_encode_s: 0.064235961
+  t_generate_s: 5.649210444
+  t_decode_s: 0.000610115
+  t_total_s: 5.714056520000001
+  tokens_per_s: 4.779428960497758
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Detect and list all the colors of the cars shown in the images.
+  gt: '...'
+  pred: "user \nDetect and list all the colors of the cars shown in the images.assistant\n\
+    The image shows a lineup of four sports cars parked in a row on a paved road."
+  n_images: 2
+  input_tokens: 4126
+  output_tokens: 19
+  t_encode_s: 0.05961147
+  t_generate_s: 4.552799457
+  t_decode_s: 0.000638495
+  t_total_s: 4.613049422
+  tokens_per_s: 4.173256516007355

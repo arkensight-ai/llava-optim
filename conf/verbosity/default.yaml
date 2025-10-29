@@ -1,0 +1,15 @@
+# What to print/save during a run
+print:
+  examples_n: 2           # show up to N example Q/A pairs
+  per_sample: false       # print per-sample phase timings
+  aggregates: true        # print aggregate table at the end
+  phase_table: true       # print mean/p50/p95 per phase
+
+save:
+  samples_jsonl: true     # write per-sample rows
+  summary_json: true      # write aggregated summary.json
+  phases_csv: true        # write per-phase aggregates CSV
+  hardware_json: true     # write hardware & env metadata
+
+# Optional manual override for output dir. If null we use Hydra's run dir.
+out_dir: null

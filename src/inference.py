@@ -1,7 +1,8 @@
 
 from __future__ import annotations
-from typing import Dict, Tuple, Any, Optional
+from typing import List, Tuple, Dict, Any, Optional
 import torch
+from benchmark import PhaseTimer
 import time
 from transformers import (
     BitsAndBytesConfig,
@@ -121,100 +122,63 @@ def analyze_image_tiling(
         "total_vision_tokens_individual": int(total_tiles * tokens_per_tile),
     }
 
+@torch.inference_mode()
 def generate_single_with_stats(
-    model: LlavaOnevisionForConditionalGeneration,
-    processor: LlavaOnevisionProcessor,
-    images_for_prompt: List[Image.Image],
+    model,
+    processor,
+    images_for_prompt: List[Any],
     model_prompt: str,
     max_new_tokens: int,
     do_sample: bool,
     top_p: float,
-) -> Tuple[str | None, Dict[str, Any]]:
-    # 1) Preprocess on CPU
-    t0 = time.perf_counter()
-    raw_inputs = processor(
-        images=[images_for_prompt],   # nested list -> ONE sample with many images
-        text=[model_prompt],          # list -> batch size 1
-        padding=True,
+) -> Tuple[str, Dict[str, Any]]:
+    """
+    Returns (pred, stats) where stats contains per-phase timings and token counts.
+    """
+    device = model.device if hasattr(model, "device") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    timer = PhaseTimer()
+
+    # ENCODE (processor -> tensors)
+    timer.start("encode")
+    enc = processor(
+        images=images_for_prompt,
+        text=model_prompt,
         return_tensors="pt",
+        padding=True,
     )
-    t1 = time.perf_counter()
-    prep_time_s = t1 - t0
+    input_tokens = int(enc["input_ids"].shape[-1])
+    enc = {k: (v.to(device) if hasattr(v, "to") else v) for k, v in enc.items()}
+    timer.stop("encode")
 
-    input_ids = raw_inputs["input_ids"]
-    assert input_ids.shape[0] == 1, "Multi-image mode should create batch size 1; use images=[[...]] and text=[...]."
-    pixel_values = raw_inputs["pixel_values"]
-    image_sizes = raw_inputs["image_sizes"]
-    expanded_prompt_tokens = int(input_ids.shape[1])
-    total_tiles_in_batch = int(pixel_values.shape[0])
-    pixel_values_shape = tuple(pixel_values.shape)
-    image_sizes_shape = tuple(image_sizes.shape)
+    # GENERATE
+    torch.cuda.synchronize() if torch.cuda.is_available() else None
+    timer.start("generate")
+    out = model.generate(
+        **enc,
+        max_new_tokens=max_new_tokens,
+        do_sample=do_sample,
+        top_p=top_p,
+    )
+    torch.cuda.synchronize() if torch.cuda.is_available() else None
+    timer.stop("generate")
 
-    # tokens before <image> expansion
-    pre_ids = processor.tokenizer(model_prompt, return_tensors="pt")["input_ids"][0]
-    pre_expansion_text_tokens = int(pre_ids.numel())
+    # DECODE
+    timer.start("decode")
+    # safer to use tokenizer directly
+    pred = processor.tokenizer.batch_decode(out, skip_special_tokens=True)[0].strip()
+    timer.stop("decode")
 
-    # tiling per-image (for sanity)
-    tiling_stats = analyze_image_tiling(processor, images_for_prompt)
-    tokens_per_tile = tiling_stats["tokens_per_tile"]
-    expected_total_tiles = tiling_stats["total_tiles_individual"]
-    expected_total_vision_tokens = tiling_stats["total_vision_tokens_individual"]
-    actual_total_vision_tokens = int(total_tiles_in_batch * tokens_per_tile)
+    output_tokens = int(out.shape[-1] - input_tokens)
+    total_s = sum(timer.elapsed_s.get(p, 0.0) for p in ("encode", "generate", "decode"))
+    gen_s = timer.elapsed_s.get("generate", 0.0)
+    tps = (output_tokens / gen_s) if gen_s > 0 else float("nan")
 
-    # 2) Move to device
-    device = next(model.parameters()).device
-    t2 = time.perf_counter()
-    inputs = _move_inputs_to_device_half_if_cuda(raw_inputs, device)
-    t3 = time.perf_counter()
-    move_time_s = t3 - t2
-
-    # 3) Generate
-    gen_kwargs = {"max_new_tokens": max_new_tokens, "do_sample": do_sample}
-    if do_sample:
-        gen_kwargs["top_p"] = top_p
-
-    oom = False
-    output_tokens = None
-    gen_time_s = None
-    decoded_answer = None
-    new_tokens_generated = None
-    tps = None
-
-    try:
-        with torch.no_grad():
-            g0 = time.perf_counter()
-            output_tokens = model.generate(**inputs, **gen_kwargs)
-            g1 = time.perf_counter()
-        gen_time_s = g1 - g0
-        total_len = int(output_tokens.shape[1])
-        prompt_len = int(inputs["input_ids"].shape[1])
-        new_tokens_generated = total_len - prompt_len
-        tps = (new_tokens_generated / gen_time_s) if gen_time_s else None
-
-        decoded_full = processor.batch_decode(output_tokens, skip_special_tokens=True)[0]
-        decoded_answer = _strip_prefix(decoded_full)
-
-    except torch.cuda.OutOfMemoryError:
-        oom = True
-
-    stats: Dict[str, Any] = {
-        "num_images": len(images_for_prompt),
-        "per_image_tiles": tiling_stats["per_image"],
-        "expected_total_tiles_individual": expected_total_tiles,
-        "expected_total_vision_tokens_individual": expected_total_vision_tokens,
-        "pixel_values_shape": pixel_values_shape,
-        "image_sizes_shape": image_sizes_shape,
-        "actual_total_tiles_in_batch": total_tiles_in_batch,
-        "actual_total_vision_tokens_in_batch": actual_total_vision_tokens,
-        "tokens_per_tile": tokens_per_tile,
-        "pre_expansion_text_tokens": pre_expansion_text_tokens,
-        "prompt_tokens_after_expansion": expanded_prompt_tokens,
-        "new_tokens_generated": new_tokens_generated,
-        "tokens_per_second": tps,
-        "prep_time_s": prep_time_s,
-        "move_to_device_time_s": move_time_s,
-        "generate_time_s": gen_time_s,
-        "total_time_s": prep_time_s + move_time_s + (gen_time_s or 0.0),
-        "oom": oom,
+    stats = {
+        "time_s": dict(timer.elapsed_s),
+        "n_images": len(images_for_prompt),
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "t_total_s": total_s,
+        "tokens_per_s": tps,
     }
-    return decoded_answer, stats
+    return pred, stats
