@@ -1,4 +1,5 @@
 batch_size: 4
+temperature: 0
 max_new_tokens: 256
 do_sample: false
 top_p: 0.9
