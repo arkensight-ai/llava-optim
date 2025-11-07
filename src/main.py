@@ -7,7 +7,7 @@ SRC_ROOT = os.path.dirname(FILE_DIR)  # points to .../src
 if SRC_ROOT not in sys.path:
     sys.path.insert(0, SRC_ROOT)
 
-from inference import load_model, generate_single_with_stats, generate_batch_with_stats
+from inference import load_model, generate_with_stats
 from data_loading import prepare_inputs_from_csv
 from benchmark import pretty_print_stats, write_stats_jsonl
 
@@ -43,10 +43,10 @@ def main():
         gt_chunk   = answers[start:end]
 
         # batched
-        preds, stats_list = generate_batch_with_stats(
+        preds, stats_list = generate_with_stats(
             model=model,
             processor=processor,
-            images_batch=imgs_chunk,
+            images=imgs_chunk,
             model_prompts=prom_chunk,
             max_new_tokens=args.max_new_tokens,
             do_sample=not args.no_sample,
