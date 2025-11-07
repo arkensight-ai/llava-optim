@@ -425,3 +425,537 @@ sample:
     encode: 0.119440734
     generate: 6.707132538
     decode: 0.000744726
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.359521385
+  tokens_per_s: 29.621491479639204
+  phase_times:
+    encode: 0.111259063
+    generate: 7.247485343
+    decode: 0.000776979
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.966859071
+  tokens_per_s: 31.29100183861032
+  phase_times:
+    encode: 0.143262982
+    generate: 6.822901493
+    decode: 0.000694596
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.451273201
+  tokens_per_s: 29.256745004430016
+  phase_times:
+    encode: 0.112303896
+    generate: 7.338111246
+    decode: 0.000858059
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.068691971
+  tokens_per_s: 30.840217807533037
+  phase_times:
+    encode: 0.140272031
+    generate: 6.927775693
+    decode: 0.000644247
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.337371477
+  tokens_per_s: 29.710912236534703
+  phase_times:
+    encode: 0.116968024
+    generate: 7.21972104
+    decode: 0.000682413
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.891664606
+  tokens_per_s: 31.632415746147238
+  phase_times:
+    encode: 0.117879884
+    generate: 6.773189971
+    decode: 0.000594751
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 7.2961676639999995
+  tokens_per_s: 30.01575759841256
+  phase_times:
+    encode: 0.123983937
+    generate: 7.171474031
+    decode: 0.000709696
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.2961676639999995
+  tokens_per_s: 29.7416410906645
+  phase_times:
+    encode: 0.123983937
+    generate: 7.171474031
+    decode: 0.000709696
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.2961676639999995
+  tokens_per_s: 29.7416410906645
+  phase_times:
+    encode: 0.123983937
+    generate: 7.171474031
+    decode: 0.000709696
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.2961676639999995
+  tokens_per_s: 29.87869934453853
+  phase_times:
+    encode: 0.123983937
+    generate: 7.171474031
+    decode: 0.000709696
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 6.811425099
+  tokens_per_s: 32.151862028425136
+  phase_times:
+    encode: 0.113262681
+    generate: 6.69757148
+    decode: 0.000590938
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.811425099
+  tokens_per_s: 31.858237717663258
+  phase_times:
+    encode: 0.113262681
+    generate: 6.69757148
+    decode: 0.000590938
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.811425099
+  tokens_per_s: 31.858237717663258
+  phase_times:
+    encode: 0.113262681
+    generate: 6.69757148
+    decode: 0.000590938
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.811425099
+  tokens_per_s: 32.00504987304419
+  phase_times:
+    encode: 0.113262681
+    generate: 6.69757148
+    decode: 0.000590938
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 7.217098185999999
+  tokens_per_s: 30.344605872873462
+  phase_times:
+    encode: 0.118030237
+    generate: 7.098293577
+    decode: 0.000774372
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.217098185999999
+  tokens_per_s: 30.06748618453672
+  phase_times:
+    encode: 0.118030237
+    generate: 7.098293577
+    decode: 0.000774372
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.217098185999999
+  tokens_per_s: 30.06748618453672
+  phase_times:
+    encode: 0.118030237
+    generate: 7.098293577
+    decode: 0.000774372
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.217098185999999
+  tokens_per_s: 30.206046028705092
+  phase_times:
+    encode: 0.118030237
+    generate: 7.098293577
+    decode: 0.000774372
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 6.879159874
+  tokens_per_s: 31.835282797790082
+  phase_times:
+    encode: 0.120559941
+    generate: 6.757892487
+    decode: 0.000707446
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.879159874
+  tokens_per_s: 31.54454962155456
+  phase_times:
+    encode: 0.120559941
+    generate: 6.757892487
+    decode: 0.000707446
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.879159874
+  tokens_per_s: 31.54454962155456
+  phase_times:
+    encode: 0.120559941
+    generate: 6.757892487
+    decode: 0.000707446
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.879159874
+  tokens_per_s: 31.689916209672322
+  phase_times:
+    encode: 0.120559941
+    generate: 6.757892487
+    decode: 0.000707446
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 7.400816238
+  tokens_per_s: 29.59133059885063
+  phase_times:
+    encode: 0.11518869
+    generate: 7.284896473
+    decode: 0.000731075
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.400816238
+  tokens_per_s: 29.32109013676067
+  phase_times:
+    encode: 0.11518869
+    generate: 7.284896473
+    decode: 0.000731075
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 7.400816238
+  tokens_per_s: 29.32109013676067
+  phase_times:
+    encode: 0.11518869
+    generate: 7.284896473
+    decode: 0.000731075
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.400816238
+  tokens_per_s: 29.45621036780565
+  phase_times:
+    encode: 0.11518869
+    generate: 7.284896473
+    decode: 0.000731075
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 1473
+  output_tokens: 219
+  t_total_s: 6.913214817
+  tokens_per_s: 31.678460137166024
+  phase_times:
+    encode: 0.123095301
+    generate: 6.78942609
+    decode: 0.000693426
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.913214817
+  tokens_per_s: 31.389159131347153
+  phase_times:
+    encode: 0.123095301
+    generate: 6.78942609
+    decode: 0.000693426
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 1475
+  output_tokens: 217
+  t_total_s: 6.913214817
+  tokens_per_s: 31.389159131347153
+  phase_times:
+    encode: 0.123095301
+    generate: 6.78942609
+    decode: 0.000693426
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.913214817
+  tokens_per_s: 31.53380963425659
+  phase_times:
+    encode: 0.123095301
+    generate: 6.78942609
+    decode: 0.000693426
