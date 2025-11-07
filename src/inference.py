@@ -1,6 +1,6 @@
 
 from __future__ import annotations
-from typing import List, Tuple, Dict, Any, Optional
+from typing import List, Tuple, Dict, Any, Optional, Union
 import torch
 from benchmark import PhaseTimer, build_generation_stats
 from transformers import (
@@ -113,107 +113,66 @@ def analyze_image_tiling(
         "total_vision_tokens_individual": int(total_tiles * tokens_per_tile),
     }
 
-@torch.inference_mode()
-def generate_single_with_stats(
-    model,
-    processor,
-    images_for_prompt: List[Any],
-    model_prompt: str,
-    max_new_tokens: int,
-    do_sample: bool,
-    top_p: float,
-) -> Tuple[str, Dict[str, Any]]:
-    """
-    Returns (pred, stats) where stats contains per-phase timings and token counts.
-    """
-    device = model.device if hasattr(model, "device") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    timer = PhaseTimer()
-
-    @timer.measure("encode")
-    def _encode() -> Tuple[Dict[str, Any], int]:
-        enc = processor(
-            images=images_for_prompt,
-            text=model_prompt,
-            return_tensors="pt",
-            padding=True,
-        )
-        input_tokens = int(enc["input_ids"].shape[-1])
-        enc = {k: (v.to(device) if hasattr(v, "to") else v) for k, v in enc.items()}
-        return enc, input_tokens
-
-    enc, input_tokens = _encode()
-
-    @timer.measure("generate")
-    def _generate() -> torch.Tensor:
-        if torch.cuda.is_available():
-            torch.cuda.synchronize()
-        out = model.generate(
-            **enc,
-            max_new_tokens=max_new_tokens,
-            do_sample=do_sample,
-            top_p=top_p,
-        )
-        if torch.cuda.is_available():
-            torch.cuda.synchronize()
-        return out
-
-    out = _generate()
-
-    @timer.measure("decode")
-    def _decode() -> str:
-        return processor.tokenizer.batch_decode(out, skip_special_tokens=True)[0].strip()
-
-    pred = _decode()
-
-    output_tokens = int(out.shape[-1] - input_tokens)
-    stats = build_generation_stats(
-        timer=timer,
-        n_images=len(images_for_prompt),
-        input_tokens=input_tokens,
-        output_tokens=output_tokens,
-    )
-    return pred, stats
-
 def _token_lengths(input_ids: torch.Tensor, pad_id: int) -> List[int]:
     # counts non-pad tokens per row
     return (input_ids != pad_id).sum(dim=1).tolist()
 
+def _normalize_generation_inputs(
+    images_input: Union[List[Any], List[List[Any]]],
+    prompts_input: Union[str, List[str]],
+) -> Tuple[List[List[Any]], List[str], bool]:
+    if isinstance(prompts_input, str):
+        if not isinstance(images_input, list):
+            raise TypeError("images must be a list of images when passing a single prompt.")
+        return [images_input], [prompts_input], True
+    if not isinstance(prompts_input, list):
+        raise TypeError("model_prompts must be a string or a list of strings.")
+    if not isinstance(images_input, list):
+        raise TypeError("images must be a list.")
+    if len(images_input) != len(prompts_input):
+        raise ValueError("images and prompts must align.")
+    if len(prompts_input) == 0:
+        return [], [], False
+    if not all(isinstance(sample, list) for sample in images_input):
+        raise TypeError("For batched generation, images must be a list of image lists.")
+    n_imgs = len(images_input[0])
+    if not all(len(sample) == n_imgs for sample in images_input):
+        raise ValueError("For simple batching, all samples must have the same number of images.")
+    return images_input, prompts_input, False
+
 @torch.inference_mode()
-def generate_batch_with_stats(
+def generate_with_stats(
     model,
     processor,
-    images_batch: List[List["PIL.Image.Image"]],
-    model_prompts: List[str],
+    images: Union[List[Any], List[List["PIL.Image.Image"]]],
+    model_prompts: Union[str, List[str]],
     max_new_tokens: int = 256,
     do_sample: bool = False,
     top_p: float = 0.9,
     temperature: float = 1.0,
-) -> tuple[list[str], list[Dict[str, Any]]]:
+):
     """
-    images_batch: list of samples, each sample is a list of PIL images (same count across samples)
-    model_prompts: list of already-templated texts (same length as images_batch)
+    Unified generation helper that handles both single-sample and batched inference.
+    Pass a single prompt (str) with a list of images for single-mode,
+    or lists of prompts/images for batch-mode.
     """
-    assert len(images_batch) == len(model_prompts), "images and prompts must align"
-    bs = len(model_prompts)
+    images_batch, prompts_batch, single_mode = _normalize_generation_inputs(images, model_prompts)
+    bs = len(prompts_batch)
     if bs == 0:
-        return [], []
-
-    # --- simple compatibility checks (fail fast) ---
-    n_imgs = len(images_batch[0])
-    if not all(len(x) == n_imgs for x in images_batch):
-        raise ValueError("For simple batching, all samples in a batch must have the same number of images.")
+        return ("", {}) if single_mode else ([], [])
 
     timer = PhaseTimer()
 
     @timer.measure("encode")
     def _encode_batch():
         enc_local = processor(
-            text=model_prompts,
+            text=prompts_batch,
             images=images_batch,           # list[list[PIL.Image]]
             padding=True,                  # pad text to max length in the batch
             return_tensors="pt",
         )
-        return enc_local.to(model.device)
+        device = getattr(model, "device", torch.device("cuda" if torch.cuda.is_available() else "cpu"))
+        return enc_local.to(device)
 
     enc = _encode_batch()
 
@@ -251,11 +210,13 @@ def generate_batch_with_stats(
     stats = [
         build_generation_stats(
             timer=timer,
-            n_images=n_imgs,
+            n_images=len(images_batch[i]),
             input_tokens=inp_tok[i],
             output_tokens=out_tok[i],
         )
         for i in range(bs)
     ]
 
+    if single_mode:
+        return preds[0], stats[0]
     return preds, stats

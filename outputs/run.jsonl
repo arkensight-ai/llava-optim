@@ -365,3 +365,63 @@ sample:
     encode: 0.126855903
     generate: 6.829404205
     decode: 0.000629017
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.309219422
+  tokens_per_s: 29.82534623927726
+  phase_times:
+    encode: 0.109866737
+    generate: 7.198619081
+    decode: 0.000733604
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.906010035
+  tokens_per_s: 31.566707678553204
+  phase_times:
+    encode: 0.136397465
+    generate: 6.768924507
+    decode: 0.000688063
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 7.239893434
+  tokens_per_s: 30.11094044233138
+  phase_times:
+    encode: 0.117130788
+    generate: 7.122067034
+    decode: 0.000695612
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 1474
+  output_tokens: 218
+  t_total_s: 6.827317998
+  tokens_per_s: 31.93054726085135
+  phase_times:
+    encode: 0.119440734
+    generate: 6.707132538
+    decode: 0.000744726

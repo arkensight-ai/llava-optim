@@ -7,7 +7,7 @@ import hydra
 from hydra.core.hydra_config import HydraConfig
 import torch
 
-from inference import load_model, generate_batch_with_stats
+from inference import load_model, generate_with_stats
 from data_loading import prepare_inputs_from_csv
 from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
 
@@ -56,10 +56,10 @@ def main(cfg: DictConfig) -> None:
         imgs_chunk = images_batch[start:end]
         prom_chunk = model_prompts[start:end]
 
-        preds, stats_list = generate_batch_with_stats(
+        preds, stats_list = generate_with_stats(
             model=model,
             processor=processor,
-            images_batch=imgs_chunk,
+            images=imgs_chunk,
             model_prompts=prom_chunk,
             max_new_tokens=int(cfg.gen.max_new_tokens),
             do_sample=bool(cfg.gen.do_sample),
