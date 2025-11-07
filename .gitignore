@@ -1,3 +1,6 @@
+# Temporary outputs
+outputs/
+
 # Large files
 models/
 *.onnx
