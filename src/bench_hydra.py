@@ -36,7 +36,6 @@ def main(cfg: DictConfig) -> None:
     # Model
     model, processor = load_model(
         model_id=cfg.model.model_id,
-        four_bit=None,
         quant=cfg.quant,
     )
 
@@ -70,6 +69,7 @@ def main(cfg: DictConfig) -> None:
 
         for j, (pred, s) in enumerate(zip(preds, stats_list)):
             idx = start + j
+            phase_times = {k: float(v) for k, v in (s.get("phase_times") or {}).items()}
             row = SampleRow(
                 idx=idx,
                 user_prompt=user_prompts[idx],
@@ -78,11 +78,9 @@ def main(cfg: DictConfig) -> None:
                 n_images=int(s["n_images"]),
                 input_tokens=int(s["input_tokens"]),
                 output_tokens=int(s["output_tokens"]),
-                t_encode_s=float(s["time_s"].get("encode", 0.0)),
-                t_generate_s=float(s["time_s"].get("generate", 0.0)),
-                t_decode_s=float(s["time_s"].get("decode", 0.0)),
                 t_total_s=float(s["t_total_s"]),
                 tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
+                phase_times=phase_times,
             )
             samples.append(row)
 
@@ -93,9 +91,11 @@ def main(cfg: DictConfig) -> None:
             print(f"→ Model: {row.pred}")
             if row.gt != "":
                 print(f"→ GT:    {row.gt}")
-            print(f"encode: {row.t_encode_s:.3f}s | generate: {row.t_generate_s:.3f}s | "
-                  f"decode: {row.t_decode_s:.3f}s | total: {row.t_total_s:.3f}s | "
-                  f"toks/s: {row.tokens_per_s:.1f}")
+            if row.phase_times:
+                phase_bits = " | ".join(f"{name}: {dur:.3f}s" for name, dur in sorted(row.phase_times.items()))
+            else:
+                phase_bits = "phases: n/a"
+            print(f"{phase_bits} | total: {row.t_total_s:.3f}s | toks/s: {row.tokens_per_s:.1f}")
 
         # Show examples (first N only)
         if cfg.verbosity.print.examples_n and idx < int(cfg.verbosity.print.examples_n) and not cfg.verbosity.print.per_sample:
