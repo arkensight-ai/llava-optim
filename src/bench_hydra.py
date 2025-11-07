@@ -1,16 +1,24 @@
 from __future__ import annotations
 import os
-from typing import Optional
+from typing import Callable, Optional, Tuple
 from omegaconf import DictConfig, OmegaConf
 from hydra.utils import to_absolute_path
 import hydra
 from hydra.core.hydra_config import HydraConfig
 import torch
 
-from inference import load_model, generate_with_stats
+import inference as hf_backend
+import onnx_inference as onnx_backend
 from data_loading import prepare_inputs_from_csv
 from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
 from logging_utils import make_sample_logger
+
+
+def _resolve_backend(name: Optional[str]) -> Tuple[Callable[..., object], Callable[..., object]]:
+    normalized = (name or "hf").lower()
+    if normalized == "onnx":
+        return onnx_backend.load_model, onnx_backend.generate_with_stats
+    return hf_backend.load_model, hf_backend.generate_with_stats
 
 
 @hydra.main(config_path="../conf", config_name="config", version_base="1.3")
@@ -35,16 +43,32 @@ def main(cfg: DictConfig) -> None:
     )
 
     # Model
-    model, processor = load_model(
-        model_id=cfg.model.model_id,
-        quant=cfg.quant,
-    )
+    load_model_fn, generate_with_stats_fn = _resolve_backend(getattr(cfg.model, "backend", None))
+    is_onnx_backend = load_model_fn is onnx_backend.load_model
+    load_kwargs = {
+        "model_id": cfg.model.model_id,
+        "quant": cfg.quant,
+    }
+    if load_model_fn is onnx_backend.load_model:
+        onnx_dir = getattr(cfg.model, "onnx_dir", None)
+        if not onnx_dir:
+            raise ValueError("cfg.model.onnx_dir must be set when using the ONNX backend.")
+        load_kwargs["onnx_dir"] = onnx_dir
+
+    model, processor = load_model_fn(**load_kwargs)
+
+    max_image_side = int(cfg.preprocess.max_image_side)
+    if is_onnx_backend:
+        onnx_side = int(getattr(cfg.model, "max_image_side", 384))
+        max_image_side = min(max_image_side, onnx_side)
+        if max_image_side < cfg.preprocess.max_image_side:
+            print(f"[info] Clamping max_image_side to {max_image_side} for ONNX backend to reduce VRAM usage.")
 
     # Data (count as a run-level phase externally if you want)
     images_batch, model_prompts, user_prompts, answers = prepare_inputs_from_csv(
         processor=processor,
         csv_path=csv_path,
-        max_image_side=cfg.preprocess.max_image_side,
+        max_image_side=max_image_side,
     )
 
     sample_logger = make_sample_logger(
@@ -84,7 +108,7 @@ def main(cfg: DictConfig) -> None:
         imgs_chunk = images_batch[start:end]
         prom_chunk = model_prompts[start:end]
 
-        preds, stats_list = generate_with_stats(
+        preds, stats_list = generate_with_stats_fn(
             model=model,
             processor=processor,
             images=imgs_chunk,

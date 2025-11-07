@@ -959,3 +959,151 @@ sample:
     encode: 0.123095301
     generate: 6.78942609
     decode: 0.000693426
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: The image features a vibrant red sports car, a Bugatti, prominently displayed
+    in the center of the frame. The car is sleek and modern, with a distinctive design
+    that includes a large grille and a curved hood. It's positioned on a paved road,
+    with a backdrop of lush greenery and a building with a sign that reads "BENTLEY
+    DUSSELORF". The car appears to be in motion, as suggested by the blurred background,
+    indicating that it's driving at a moderate speed. The license plate of the car
+    reads "91 HUL", which could be a personalized plate or a registration number.
+    The overall scene suggests a sunny day with clear visibility, perfect for enjoying
+    a drive in a luxury sports car.
+  n_images: 2
+  input_tokens: 2930
+  output_tokens: 147
+  t_total_s: 9.444886332
+  tokens_per_s: 15.563977673500709
+  phase_times:
+    tokenize: 0.001480295
+    vision: 0.566199437
+    embed: 0.029622057
+    decode: 8.847584543
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: There is one car visible in the image. It is a red sports car with a sleek
+    design, featuring a prominent front grille and large air intakes on the hood.
+    The car is positioned on a road with a blurred background, suggesting motion.
+  n_images: 2
+  input_tokens: 2932
+  output_tokens: 49
+  t_total_s: 3.481674722999999
+  tokens_per_s: 14.073686917478309
+  phase_times:
+    tokenize: 0.000347093
+    vision: 0.286915524
+    embed: 0.0076374699999999995
+    decode: 3.186774635999999
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: parking
+  n_images: 2
+  input_tokens: 2932
+  output_tokens: 2
+  t_total_s: 1.17637796
+  tokens_per_s: 1.7001338583392025
+  phase_times:
+    tokenize: 0.000330768
+    vision: 0.287286544
+    embed: 0.000568732
+    decode: 0.888191916
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: First image
+  n_images: 2
+  input_tokens: 2931
+  output_tokens: 2
+  t_total_s: 1.244240648
+  tokens_per_s: 1.6074060940018415
+  phase_times:
+    tokenize: 0.000309426
+    vision: 0.286651947
+    embed: 0.00056887
+    decode: 0.9567104049999999
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: The image features a vibrant red sports car, a Bugatti, prominently displayed
+    in the center of the frame. The car is sleek and modern, with a distinctive design
+    that includes a large grille and a curved hood. It's positioned on a paved road,
+    with a backdrop of lush greenery and a building with a sign that reads "BENTLEY
+    DUSSELORF". The car appears to be in motion, as suggested by the blurred background,
+    indicating that it's driving at a moderate speed. The license plate of the car
+    reads "91 HUL", which could be a personalized plate or a registration number.
+    The overall scene suggests a sunny day with clear visibility, perfect for enjoying
+    a drive in a luxury sports car.
+  n_images: 2
+  input_tokens: 2930
+  output_tokens: 147
+  t_total_s: 8.302868199999999
+  tokens_per_s: 17.70472521772657
+  phase_times:
+    tokenize: 0.000289482
+    vision: 0.287467052
+    embed: 0.021773176999999998
+    decode: 7.993338488999999
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: There is one car visible in the image. It is a red sports car with a sleek
+    design, featuring a prominent front grille and large air intakes on the hood.
+    The car is positioned on a road with a blurred background, suggesting motion.
+  n_images: 2
+  input_tokens: 2932
+  output_tokens: 49
+  t_total_s: 3.4696305630000004
+  tokens_per_s: 14.12254103434931
+  phase_times:
+    tokenize: 0.000305727
+    vision: 0.289770651
+    embed: 0.007420328999999999
+    decode: 3.1721338560000003
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: parking
+  n_images: 2
+  input_tokens: 2932
+  output_tokens: 2
+  t_total_s: 1.181665081
+  tokens_per_s: 1.6925269538365921
+  phase_times:
+    tokenize: 0.000332336
+    vision: 0.288460739
+    embed: 0.0005817579999999999
+    decode: 0.892290248
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: First image
+  n_images: 2
+  input_tokens: 2931
+  output_tokens: 2
+  t_total_s: 1.2497208690000001
+  tokens_per_s: 1.6003573674818738
+  phase_times:
+    tokenize: 0.000289407
+    vision: 0.289371232
+    embed: 0.0005475409999999999
+    decode: 0.9595126890000001
