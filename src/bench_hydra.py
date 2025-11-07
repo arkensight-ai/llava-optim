@@ -10,6 +10,7 @@ import torch
 from inference import load_model, generate_with_stats
 from data_loading import prepare_inputs_from_csv
 from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
+from logging_utils import make_sample_logger
 
 
 @hydra.main(config_path="../conf", config_name="config", version_base="1.3")
@@ -46,10 +47,37 @@ def main(cfg: DictConfig) -> None:
         max_image_side=cfg.preprocess.max_image_side,
     )
 
+    sample_logger = make_sample_logger(
+        per_sample=bool(cfg.verbosity.print.per_sample),
+        examples_n=cfg.verbosity.print.examples_n,
+        show_phases=bool(cfg.verbosity.print.phase_table),
+    )
+
     # Loop
     samples: list[SampleRow] = []
 
     bs = int(cfg.gen.batch_size)
+
+    @sample_logger
+    def _rows_from_batch(start_idx: int, preds: list[str], stats_list) -> list[SampleRow]:
+        rows: list[SampleRow] = []
+        for j, (pred, s) in enumerate(zip(preds, stats_list)):
+            idx = start_idx + j
+            phase_times = {k: float(v) for k, v in (s.get("phase_times") or {}).items()}
+            row = SampleRow(
+                idx=idx,
+                user_prompt=user_prompts[idx],
+                gt=answers[idx],
+                pred=pred,
+                n_images=int(s["n_images"]),
+                input_tokens=int(s["input_tokens"]),
+                output_tokens=int(s["output_tokens"]),
+                t_total_s=float(s["t_total_s"]),
+                tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
+                phase_times=phase_times,
+            )
+            rows.append(row)
+        return rows
 
     for start in range(0, len(model_prompts), bs):
         end = min(start + bs, len(model_prompts))
@@ -67,50 +95,16 @@ def main(cfg: DictConfig) -> None:
             temperature=float(getattr(cfg.gen, "temperature", 1.0)),
         )
 
-        for j, (pred, s) in enumerate(zip(preds, stats_list)):
-            idx = start + j
-            phase_times = {k: float(v) for k, v in (s.get("phase_times") or {}).items()}
-            row = SampleRow(
-                idx=idx,
-                user_prompt=user_prompts[idx],
-                gt=answers[idx],
-                pred=pred,
-                n_images=int(s["n_images"]),
-                input_tokens=int(s["input_tokens"]),
-                output_tokens=int(s["output_tokens"]),
-                t_total_s=float(s["t_total_s"]),
-                tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
-                phase_times=phase_times,
-            )
-            samples.append(row)
-
-        # Printing (verbosity)
-        if cfg.verbosity.print.per_sample:
-            print(f"\n=== Sample {idx} ===")
-            print(f"Q:  {row.user_prompt}")
-            print(f"→ Model: {row.pred}")
-            if row.gt != "":
-                print(f"→ GT:    {row.gt}")
-            if row.phase_times:
-                phase_bits = " | ".join(f"{name}: {dur:.3f}s" for name, dur in sorted(row.phase_times.items()))
-            else:
-                phase_bits = "phases: n/a"
-            print(f"{phase_bits} | total: {row.t_total_s:.3f}s | toks/s: {row.tokens_per_s:.1f}")
-
-        # Show examples (first N only)
-        if cfg.verbosity.print.examples_n and idx < int(cfg.verbosity.print.examples_n) and not cfg.verbosity.print.per_sample:
-            print(f"\n=== Example {idx} ===")
-            print(f"Q:  {row.user_prompt}")
-            print(f"→ Model: {row.pred}")
-            if row.gt != "":
-                print(f"→ GT:    {row.gt}")
+        rows = _rows_from_batch(start, preds, stats_list)
+        samples.extend(rows)
 
         # Persist per-sample
-        writer.append_sample(row)
-        if out_jsonl_legacy:
-            os.makedirs(os.path.dirname(to_absolute_path(out_jsonl_legacy)), exist_ok=True)
-            with open(to_absolute_path(out_jsonl_legacy), "a", encoding="utf-8") as f:
-                f.write(OmegaConf.to_yaml({"idx": idx, "sample": row.__dict__}))
+        for row in rows:
+            writer.append_sample(row)
+            if out_jsonl_legacy:
+                os.makedirs(os.path.dirname(to_absolute_path(out_jsonl_legacy)), exist_ok=True)
+                with open(to_absolute_path(out_jsonl_legacy), "a", encoding="utf-8") as f:
+                    f.write(OmegaConf.to_yaml({"idx": row.idx, "sample": row.__dict__}))
 
     # Aggregates
     agg = aggregate(samples)
