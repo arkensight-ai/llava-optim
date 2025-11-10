@@ -9,6 +9,8 @@ from transformers import (
     LlavaOnevisionProcessor,
 )
 
+from debug_utils import DebugController, count_tiles_from_pixel_values, debug_seq_report
+
 def _maybe_dtype(name: Optional[str]) -> Optional[torch.dtype]:
     if not name:
         return None
@@ -40,6 +42,7 @@ def load_model(
     from_kwargs: Dict[str, Any] = dict(device_map="auto")
 
     if name.startswith("bnb4") or quant.get("load_in_4bit", False):
+        print("[Cfg] Loading model with 4-bit quantization.")
         bnb = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=_maybe_dtype(quant.get("bnb_4bit_compute_dtype")) or torch.bfloat16,
@@ -63,25 +66,6 @@ def load_model(
     processor.tokenizer.padding_side = "left"
     model.eval()
     return model, processor
-
-def _move_inputs_to_device_half_if_cuda(
-    inputs: Dict[str, torch.Tensor],
-    device: torch.device,
-) -> Dict[str, torch.Tensor]:
-    out: Dict[str, torch.Tensor] = {}
-    for k, v in inputs.items():
-        if isinstance(v, torch.Tensor):
-            v = v.to(device)
-            if device.type == "cuda" and v.dtype == torch.float32:
-                v = v.to(dtype=torch.float16)
-        out[k] = v
-    return out
-
-def _strip_prefix(decoded: str) -> str:
-    token = "assistant"
-    if token in decoded:
-        decoded = decoded.split(token, 1)[1]
-    return decoded.strip()
 
 def analyze_image_tiling(
     processor: LlavaOnevisionProcessor,
@@ -150,12 +134,15 @@ def generate_with_stats(
     do_sample: bool = False,
     top_p: float = 0.9,
     temperature: float = 1.0,
+    dbg: Optional[DebugController] = None,
 ):
     """
     Unified generation helper that handles both single-sample and batched inference.
     Pass a single prompt (str) with a list of images for single-mode,
     or lists of prompts/images for batch-mode.
     """
+    dbg = dbg or DebugController(None)
+
     images_batch, prompts_batch, single_mode = _normalize_generation_inputs(images, model_prompts)
     bs = len(prompts_batch)
     if bs == 0:
@@ -176,6 +163,36 @@ def generate_with_stats(
 
     enc = _encode_batch()
 
+    if dbg.enabled:
+        pv = enc.get("pixel_values", None)
+        tiles = count_tiles_from_pixel_values(pv)
+
+        try:
+            per_tile = getattr(model.config, "vision_feature_tokens", 256)
+        except Exception:
+            per_tile = 256
+        vision_tokens = tiles * per_tile
+
+        cfg_txt = getattr(model.config, "text_config", model.config)
+        hidden = getattr(cfg_txt, "hidden_size", None)
+        heads  = getattr(cfg_txt, "num_attention_heads", None)
+        layers = getattr(cfg_txt, "num_hidden_layers", None)
+
+
+        # len of the longest (padded) text row
+        text_len = int(enc["input_ids"].shape[-1]) if "input_ids" in enc else None
+
+        debug_seq_report(
+            dbg,
+            provider="torch",
+            text_len=text_len,
+            vision_tokens=vision_tokens,
+            tiles=tiles,
+            hidden_size=hidden,
+            heads=heads,
+            layers=layers,
+        )
+
     @timer.measure("generate")
     def _generate_batch():
         return model.generate(
@@ -188,6 +205,13 @@ def generate_with_stats(
         )
 
     gen_out = _generate_batch()
+
+    if dbg.enabled and dbg.detail.gen_summary:
+        out_ids = gen_out[0] if hasattr(gen_out, "__array__") else gen_out.sequences[0]
+        prompt_len = int(enc["input_ids"].shape[-1])
+        gen_len = int(out_ids.shape[-1]) - prompt_len
+        print(f"[debug/torch] generated_tokens={gen_len} (prompt={prompt_len} → total={int(out_ids.shape[-1])})")
+
 
     @timer.measure("decode")
     def _decode_batch():

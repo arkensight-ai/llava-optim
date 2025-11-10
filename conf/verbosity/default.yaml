@@ -1,4 +1,19 @@
-# What to print/save during a run
+debug: false  # master on/off
+
+# Fine-grained toggles (safe defaults)
+debug_detail:
+  seq_report: true       # token/tiles/rough L² estimate
+  io_schema: false       # print ORT IO schemas
+  onnx_dtypes: true      # count initializer dtypes per ONNX graph
+  kv_shapes: false       # print compact PKV shapes during chunk prefill
+  gen_summary: true      # print generated token counts
+
+# ONNX-specific tuning (used by chunked prefill)
+onnx:
+  chunk_size: 512        # 0 disables chunking (full prefill)
+  providers: ["CUDAExecutionProvider", "CPUExecutionProvider"]
+  assert_fp16_ratio: 0.80  # used in tests or sanity checks
+
 print:
   examples_n: 2           # show up to N example Q/A pairs
   per_sample: false       # print per-sample phase timings

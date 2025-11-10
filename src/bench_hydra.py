@@ -12,6 +12,7 @@ import onnx_inference as onnx_backend
 from data_loading import prepare_inputs_from_csv
 from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
 from logging_utils import make_sample_logger
+from debug_utils import DebugController
 
 
 def _resolve_backend(name: Optional[str]) -> Tuple[Callable[..., object], Callable[..., object]]:
@@ -117,6 +118,7 @@ def main(cfg: DictConfig) -> None:
             do_sample=bool(cfg.gen.do_sample),
             top_p=float(cfg.gen.top_p),
             temperature=float(getattr(cfg.gen, "temperature", 1.0)),
+            dbg=DebugController(cfg),
         )
 
         rows = _rows_from_batch(start, preds, stats_list)
