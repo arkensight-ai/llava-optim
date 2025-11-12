@@ -59,11 +59,11 @@ def main(cfg: DictConfig) -> None:
     model, processor = load_model_fn(**load_kwargs)
 
     max_image_side = int(cfg.preprocess.max_image_side)
-    if is_onnx_backend:
-        onnx_side = int(getattr(cfg.model, "max_image_side", 384))
-        max_image_side = min(max_image_side, onnx_side)
-        if max_image_side < cfg.preprocess.max_image_side:
-            print(f"[info] Clamping max_image_side to {max_image_side} for ONNX backend to reduce VRAM usage.")
+    # if is_onnx_backend:
+    #     onnx_side = int(getattr(cfg.model, "max_image_side", 384))
+    #     max_image_side = min(max_image_side, onnx_side)
+    #     if max_image_side < cfg.preprocess.max_image_side:
+    #         print(f"[info] Clamping max_image_side to {max_image_side} for ONNX backend to reduce VRAM usage.")
 
     # Data (count as a run-level phase externally if you want)
     images_batch, model_prompts, user_prompts, answers = prepare_inputs_from_csv(

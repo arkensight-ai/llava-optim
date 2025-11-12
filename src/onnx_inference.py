@@ -207,7 +207,7 @@ def load_model(
     emb_inp = dec_inputs.get("inputs_embeds")
     emb_dtype = _onnx_type_to_np(emb_inp.type) if emb_inp is not None else np.float16
 
-    processor = LlavaOnevisionProcessor.from_pretrained(model_id)
+    processor = LlavaOnevisionProcessor.from_pretrained(model_id, use_fast=True)
     processor.tokenizer.padding_side = "left"
     if processor.tokenizer.pad_token_id is None:
         processor.tokenizer.pad_token = processor.tokenizer.eos_token

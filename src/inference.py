@@ -8,7 +8,6 @@ from transformers import (
     LlavaOnevisionForConditionalGeneration,
     LlavaOnevisionProcessor,
 )
-
 from debug_utils import DebugController, count_tiles_from_pixel_values, debug_seq_report
 
 def _maybe_dtype(name: Optional[str]) -> Optional[torch.dtype]:
@@ -62,8 +61,11 @@ def load_model(
         model_id,
         **from_kwargs,
     )
-    processor = LlavaOnevisionProcessor.from_pretrained(model_id)
+    processor = LlavaOnevisionProcessor.from_pretrained(model_id, use_fast=True)
     processor.tokenizer.padding_side = "left"
+    if processor.tokenizer.pad_token_id is None:
+        processor.tokenizer.pad_token = processor.tokenizer.eos_token
+
     model.eval()
     return model, processor
 
