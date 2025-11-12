@@ -64,25 +64,6 @@ def load_model(
     model.eval()
     return model, processor
 
-def _move_inputs_to_device_half_if_cuda(
-    inputs: Dict[str, torch.Tensor],
-    device: torch.device,
-) -> Dict[str, torch.Tensor]:
-    out: Dict[str, torch.Tensor] = {}
-    for k, v in inputs.items():
-        if isinstance(v, torch.Tensor):
-            v = v.to(device)
-            if device.type == "cuda" and v.dtype == torch.float32:
-                v = v.to(dtype=torch.float16)
-        out[k] = v
-    return out
-
-def _strip_prefix(decoded: str) -> str:
-    token = "assistant"
-    if token in decoded:
-        decoded = decoded.split(token, 1)[1]
-    return decoded.strip()
-
 def analyze_image_tiling(
     processor: LlavaOnevisionProcessor,
     images_for_prompt: List[Image.Image],
