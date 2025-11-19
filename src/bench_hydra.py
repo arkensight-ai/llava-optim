@@ -1,15 +1,28 @@
 from __future__ import annotations
+
 import os
 from typing import Optional
-from omegaconf import DictConfig, OmegaConf
-from hydra.utils import to_absolute_path
+
 import hydra
 from hydra.core.hydra_config import HydraConfig
+from hydra.utils import to_absolute_path
+from omegaconf import DictConfig, OmegaConf
 import torch
 
-from inference import load_model, generate_with_stats
+from inference import (
+    load_model,
+    load_model_vllm,
+    generate_with_stats,
+    generate_with_stats_vllm,
+)
 from data_loading import prepare_inputs_from_csv
-from benchmark import SampleRow, aggregate, BenchmarkWriter, collect_env, print_aggregates
+from benchmark import (
+    SampleRow,
+    aggregate,
+    BenchmarkWriter,
+    collect_env,
+    print_aggregates,
+)
 from logging_utils import make_sample_logger
 
 
@@ -28,19 +41,37 @@ def main(cfg: DictConfig) -> None:
     out_dir = cfg.verbosity.out_dir or runtime_out_dir
     out_dir = to_absolute_path(out_dir)
 
-
     writer = BenchmarkWriter(
         out_dir=out_dir,
         save_cfg=dict(cfg.verbosity.save),
     )
 
-    # Model
-    model, processor = load_model(
-        model_id=cfg.model.model_id,
-        quant=cfg.quant,
-    )
+    # ------------------------------------------------------------------
+    # Model + backend selection
+    # ------------------------------------------------------------------
+    backend = str(getattr(cfg.model, "backend", "hf")).lower()
+    if backend == "hf":
+        model, processor = load_model(
+            model_id=cfg.model.model_id,
+            quant=cfg.quant,
+        )
+        generate_fn = generate_with_stats
+    elif backend == "vllm":
+        model, processor = load_model_vllm(
+            model_id=cfg.model.model_id,
+            quant=cfg.quant,
+            max_model_len=int(getattr(cfg.model, "max_model_len", 8192)),
+            gpu_memory_utilization=float(
+                getattr(cfg.model, "gpu_memory_utilization", 0.9)
+            ),
+        )
+        generate_fn = generate_with_stats_vllm
+    else:
+        raise ValueError(f"Unknown backend: {backend}")
 
+    # ------------------------------------------------------------------
     # Data (count as a run-level phase externally if you want)
+    # ------------------------------------------------------------------
     images_batch, model_prompts, user_prompts, answers = prepare_inputs_from_csv(
         processor=processor,
         csv_path=csv_path,
@@ -55,15 +86,18 @@ def main(cfg: DictConfig) -> None:
 
     # Loop
     samples: list[SampleRow] = []
-
     bs = int(cfg.gen.batch_size)
 
     @sample_logger
-    def _rows_from_batch(start_idx: int, preds: list[str], stats_list) -> list[SampleRow]:
+    def _rows_from_batch(
+        start_idx: int, preds: list[str], stats_list
+    ) -> list[SampleRow]:
         rows: list[SampleRow] = []
         for j, (pred, s) in enumerate(zip(preds, stats_list)):
             idx = start_idx + j
-            phase_times = {k: float(v) for k, v in (s.get("phase_times") or {}).items()}
+            phase_times = {
+                k: float(v) for k, v in (s.get("phase_times") or {}).items()
+            }
             row = SampleRow(
                 idx=idx,
                 user_prompt=user_prompts[idx],
@@ -73,7 +107,9 @@ def main(cfg: DictConfig) -> None:
                 input_tokens=int(s["input_tokens"]),
                 output_tokens=int(s["output_tokens"]),
                 t_total_s=float(s["t_total_s"]),
-                tokens_per_s=float(s["tokens_per_s"]) if s["tokens_per_s"] == s["tokens_per_s"] else 0.0,
+                tokens_per_s=float(s["tokens_per_s"])
+                if s["tokens_per_s"] == s["tokens_per_s"]
+                else 0.0,
                 phase_times=phase_times,
             )
             rows.append(row)
@@ -84,7 +120,7 @@ def main(cfg: DictConfig) -> None:
         imgs_chunk = images_batch[start:end]
         prom_chunk = model_prompts[start:end]
 
-        preds, stats_list = generate_with_stats(
+        preds, stats_list = generate_fn(
             model=model,
             processor=processor,
             images=imgs_chunk,
@@ -102,9 +138,14 @@ def main(cfg: DictConfig) -> None:
         for row in rows:
             writer.append_sample(row)
             if out_jsonl_legacy:
-                os.makedirs(os.path.dirname(to_absolute_path(out_jsonl_legacy)), exist_ok=True)
-                with open(to_absolute_path(out_jsonl_legacy), "a", encoding="utf-8") as f:
-                    f.write(OmegaConf.to_yaml({"idx": row.idx, "sample": row.__dict__}))
+                legacy_path = to_absolute_path(out_jsonl_legacy)
+                os.makedirs(os.path.dirname(legacy_path), exist_ok=True)
+                with open(legacy_path, "a", encoding="utf-8") as f:
+                    f.write(
+                        OmegaConf.to_yaml(
+                            {"idx": row.idx, "sample": row.__dict__}
+                        )
+                    )
 
     # Aggregates
     agg = aggregate(samples)
@@ -118,6 +159,7 @@ def main(cfg: DictConfig) -> None:
         "gen": OmegaConf.to_container(cfg.gen, resolve=True),
         "preprocess": OmegaConf.to_container(cfg.preprocess, resolve=True),
         "dataset": {"csv": os.path.basename(csv_path), "n": len(samples)},
+        "backend": backend,
     }
     writer.write_summary(agg, meta)
     writer.write_hardware(collect_env())

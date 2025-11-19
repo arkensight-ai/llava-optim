@@ -959,3 +959,291 @@ sample:
     encode: 0.123095301
     generate: 6.78942609
     decode: 0.000693426
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: The image features a vibrant red sports car, a Porsche, in motion on a road.
+    The car is sleek and modern, with a distinctive design that includes a large front
+    grille, angular headlights, and a low profile. The license plate on the car reads
+    "91 HUL," which is a unique identifier for the vehicle. The car is equipped with
+    large, black alloy wheels and has a sporty stance, suggesting it's designed for
+    high-speed performance. The background shows a lush green environment with trees
+    and a building that appears to be a dealership, indicating that the car might
+    be on display or being driven around the area.
+  n_images: 2
+  input_tokens: 15
+  output_tokens: 126
+  t_total_s: 11.901715427
+  tokens_per_s: 10.586709182624116
+  phase_times:
+    encode: 0.002571488
+    generate: 11.897800057
+    decode: 0.001343882
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: There is one car visible in the image. It is a red sports car with a sleek
+    design, featuring a prominent front grille and large headlights. The car is captured
+    in motion, as indicated by the blurred background, suggesting it is driving at
+    a high speed.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 52
+  t_total_s: 11.901715427
+  tokens_per_s: 4.369118075368683
+  phase_times:
+    encode: 0.002571488
+    generate: 11.897800057
+    decode: 0.001343882
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The cars are parked in a garage.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 8
+  t_total_s: 11.901715427
+  tokens_per_s: 0.672172011595182
+  phase_times:
+    encode: 0.002571488
+    generate: 11.897800057
+    decode: 0.001343882
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: The third image
+  n_images: 2
+  input_tokens: 16
+  output_tokens: 3
+  t_total_s: 11.901715427
+  tokens_per_s: 0.2520645043481933
+  phase_times:
+    encode: 0.002571488
+    generate: 11.897800057
+    decode: 0.001343882
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: The image features a vibrant red sports car, a Porsche, in motion on a road.
+    The car is sleek and modern, with a distinctive design that includes a large front
+    grille, angular headlights, and a low profile. The license plate on the car reads
+    "91 HUL," which is a unique identifier for the vehicle. The car is equipped with
+    large, black alloy wheels and has a sporty stance, suggesting it's designed for
+    high-speed performance. The background shows a lush green environment with trees
+    and a building that appears to be a dealership, indicating that the car might
+    be on display or being driven around the area.
+  n_images: 2
+  input_tokens: 15
+  output_tokens: 126
+  t_total_s: 0.947812074
+  tokens_per_s: 132.93774520960577
+  phase_times:
+    encode: 0.000498613
+    generate: 0.946096627
+    decode: 0.001216834
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: There is one car visible in the image. It is a red sports car with a sleek
+    design, featuring a prominent front grille and large headlights. The car is captured
+    in motion, as indicated by the blurred background, suggesting it is driving at
+    a high speed.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 52
+  t_total_s: 0.947812074
+  tokens_per_s: 54.863196435710314
+  phase_times:
+    encode: 0.000498613
+    generate: 0.946096627
+    decode: 0.001216834
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The cars are parked in a garage.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 8
+  t_total_s: 0.947812074
+  tokens_per_s: 8.440491759340048
+  phase_times:
+    encode: 0.000498613
+    generate: 0.946096627
+    decode: 0.001216834
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: The third image
+  n_images: 2
+  input_tokens: 16
+  output_tokens: 3
+  t_total_s: 0.947812074
+  tokens_per_s: 3.165184409752518
+  phase_times:
+    encode: 0.000498613
+    generate: 0.946096627
+    decode: 0.001216834
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 15
+  output_tokens: 218
+  t_total_s: 8.060158445
+  tokens_per_s: 27.04661471453245
+  phase_times:
+    encode: 0.113408957
+    generate: 7.944018684
+    decode: 0.002730804
+idx: 1
+sample:
+  idx: 1
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 1
+  t_total_s: 8.060158445
+  tokens_per_s: 0.12406703997491948
+  phase_times:
+    encode: 0.113408957
+    generate: 7.944018684
+    decode: 0.002730804
+idx: 2
+sample:
+  idx: 2
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 21
+  t_total_s: 8.060158445
+  tokens_per_s: 2.605407839473309
+  phase_times:
+    encode: 0.113408957
+    generate: 7.944018684
+    decode: 0.002730804
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 16
+  output_tokens: 1
+  t_total_s: 8.060158445
+  tokens_per_s: 0.12406703997491948
+  phase_times:
+    encode: 0.113408957
+    generate: 7.944018684
+    decode: 0.002730804
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Describe what you see.
+  gt: '...'
+  pred: 'assistant
+
+    The image captures a moment of tranquility and speed, as a sleek, sleek, and powerful
+    sports car, a Porsche Panamera, is captured in motion on a winding road. The car,
+    painted in a vibrant shade of red, is a striking contrast against the backdrop
+    of a gray road. The car''s black roof and black rims add to its sleek design,
+    while the black side mirrors and black side skirts add a touch of elegance. The
+    car is in motion, driving on the right side of the road, suggesting a location
+    where driving on the right is the norm. The license plate of the car reads "91
+    HJ 9999", a detail that adds to its distinctive look. The car is positioned in
+    front of a building, which is identified as a Bentley DRS D5000. The background
+    is a serene setting of trees and buildings, providing a natural and urban contrast
+    to the car''s modern design. The car''s position on the road and its direction
+    suggest it''s moving away from the viewer, further emphasizing its speed and power.'
+  n_images: 2
+  input_tokens: 15
+  output_tokens: 218
+  t_total_s: 7.454220202
+  tokens_per_s: 29.245178448244612
+  phase_times:
+    encode: 0.117980471
+    generate: 7.333957811
+    decode: 0.00228192
+idx: 5
+sample:
+  idx: 5
+  user_prompt: How many cars do you see?
+  gt: '2'
+  pred: two
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 1
+  t_total_s: 7.454220202
+  tokens_per_s: 0.1341521947167184
+  phase_times:
+    encode: 0.117980471
+    generate: 7.333957811
+    decode: 0.00228192
+idx: 6
+sample:
+  idx: 6
+  user_prompt: What are the cars doing?,..."
+  gt: ''
+  pred: The image shows a black Bugatti Chiron, a luxury sports car, parked in a parking
+    lot.
+  n_images: 2
+  input_tokens: 17
+  output_tokens: 21
+  t_total_s: 7.454220202
+  tokens_per_s: 2.8171960890510865
+  phase_times:
+    encode: 0.117980471
+    generate: 7.333957811
+    decode: 0.00228192
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Which image has more cars?
+  gt: '...'
+  pred: 'yes'
+  n_images: 2
+  input_tokens: 16
+  output_tokens: 1
+  t_total_s: 7.454220202
+  tokens_per_s: 0.1341521947167184
+  phase_times:
+    encode: 0.117980471
+    generate: 7.333957811
+    decode: 0.00228192
