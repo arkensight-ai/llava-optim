@@ -1,0 +1,3 @@
+- model.backend=vllm
+- csv=data/bench_multi.csv
+- gen.max_new_tokens=32

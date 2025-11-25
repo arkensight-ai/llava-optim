@@ -1,0 +1,3 @@
+- model.backend=hf
+- csv=data/bench_single.csv
+- gen.max_new_tokens=32

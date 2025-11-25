@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "count": 128,
+    "latency_s": {
+      "mean": 0.82368771446875,
+      "p50": 0.44244567649999994,
+      "p95": 1.320736538,
+      "min": 0.259955505,
+      "max": 10.303316458,
+      "n": 128
+    },
+    "throughput": {
+      "tokens_per_s": {
+        "mean": 79.74966653822861,
+        "p50": 84.42524675334894,
+        "p95": 121.84176994178155,
+        "min": 3.105796092980686,
+        "max": 123.09798940399436,
+        "n": 128
+      },
+      "avg_output_tokens": 32.0,
+      "samples_per_s": 1.2140523434235817
+    }
+  },
+  "meta": {
+    "model_id": "llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
+    "quant": {
+      "name": "fp16",
+      "torch_dtype": "fp16"
+    },
+    "gen": {
+      "batch_size": 4,
+      "temperature": 0,
+      "max_new_tokens": 32,
+      "do_sample": false,
+      "top_p": 0.9,
+      "seed": 0
+    },
+    "preprocess": {
+      "max_image_side": 640
+    },
+    "dataset": {
+      "csv": "bench_single.csv",
+      "n": 128
+    },
+    "backend": "vllm"
+  }
+}

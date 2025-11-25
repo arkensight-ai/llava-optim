@@ -1,0 +1,2 @@
+- model.backend=hf
+- csv=data/bench_single.csv
