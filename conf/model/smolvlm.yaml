@@ -1,6 +1,6 @@
 # conf/model/smolvlm.yaml
 name: "smolvlm"
-model_id: "HuggingFaceTB/SmolVLM-Instruct"
+model_id: "HuggingFaceTB/SmolVLM-256M-Instruct"
 backend: "vllm"
 gpu_memory_utilization: 0.8 
 max_model_len: 8192

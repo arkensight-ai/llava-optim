@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "count": 128,
+    "latency_s": {
+      "mean": 1.1401621626875,
+      "p50": 0.806613794,
+      "p95": 6.311056647,
+      "min": 0.070871653,
+      "max": 6.311056647,
+      "n": 128
+    },
+    "throughput": {
+      "tokens_per_s": {
+        "mean": 52.150348680032536,
+        "p50": 30.37652142913223,
+        "p95": 165.82926894834176,
+        "min": 3.645568985910977,
+        "max": 186.4088491088703,
+        "n": 128
+      },
+      "avg_output_tokens": 22.65625,
+      "samples_per_s": 0.8770682212808038
+    }
+  },
+  "meta": {
+    "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "quant": {
+      "name": "fp16",
+      "torch_dtype": "fp16"
+    },
+    "gen": {
+      "batch_size": 8,
+      "temperature": 0,
+      "max_new_tokens": 256,
+      "do_sample": false,
+      "top_p": 0.9,
+      "seed": 0
+    },
+    "preprocess": {
+      "max_image_side": 640
+    },
+    "dataset": {
+      "csv": "bench_single.csv",
+      "n": 128
+    },
+    "backend": "vllm"
+  }
+}
