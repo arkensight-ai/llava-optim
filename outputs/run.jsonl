@@ -46353,3 +46353,4222 @@ sample:
     encode: 0.001596977
     generate: 0.592604302
     decode: 0.000778477
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Identify the object located at coordinates [0.8, 0.55, 1.0, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'sweater with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.8, 0.55, 1.0, 1.0] relative to the image
+    size is a man standing in front of a whiteboard.
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 41
+  t_total_s: 2.686418752
+  tokens_per_s: 15.261954216734116
+  phase_times:
+    encode: 0.370455092
+    generate: 2.31596366
+    decode: 0.000947515
+idx: 1
+sample:
+  idx: 1
+  user_prompt: Identify the object located at coordinates [0.59, 0.6, 0.65, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'fan with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.59, 0.6, 0.65, 0.91] (x1, y1, x2, y2)
+    relative to the image size is a mannequin.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 52
+  t_total_s: 2.382343332
+  tokens_per_s: 21.827248533629913
+  phase_times:
+    encode: 0.368165726
+    generate: 2.014177606
+    decode: 0.000795672
+idx: 2
+sample:
+  idx: 2
+  user_prompt: Identify the object located at coordinates [0.61, 0.97, 0.74, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: newspaper
+  pred: The object located at coordinates [0.61, 0.97, 0.74, 1.0] is a man wearing
+    a striped shirt.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 36
+  t_total_s: 1.8256208329999999
+  tokens_per_s: 19.719319230621423
+  phase_times:
+    encode: 0.344868839
+    generate: 1.480751994
+    decode: 0.000775125
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Identify the object located at coordinates [0.61, 0.9, 0.77, 0.97]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'newspaper with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.61, 0.9, 0.77, 0.97] (x1, y1, x2, y2)
+    relative to the image size is a mannequin.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 52
+  t_total_s: 2.329106591
+  tokens_per_s: 22.326157248850446
+  phase_times:
+    encode: 0.34456182
+    generate: 1.984544771
+    decode: 0.000934682
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Identify the object located at coordinates [0.0, 0.36, 1.0, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'plate with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.0, 0.36, 1.0, 1.0] is a fork.
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 30
+  t_total_s: 1.621932491
+  tokens_per_s: 18.496454178252232
+  phase_times:
+    encode: 0.34691316
+    generate: 1.275019331
+    decode: 0.000743249
+idx: 5
+sample:
+  idx: 5
+  user_prompt: Identify the object located at coordinates [0.07, 0.0, 0.67, 0.32]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plate
+  pred: The object located at coordinates [0.07, 0.0, 0.67, 0.32] is a slice of bread.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.7348268839999998
+  tokens_per_s: 19.598497298823276
+  phase_times:
+    encode: 0.344893494
+    generate: 1.38993339
+    decode: 0.000777974
+idx: 6
+sample:
+  idx: 6
+  user_prompt: Identify the object located at coordinates [0.0, 0.21, 0.04, 0.47]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plate
+  pred: The object located at coordinates [0.0, 0.21, 0.04, 0.47] is a slice of bread.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.7464288639999999
+  tokens_per_s: 19.468299397048906
+  phase_times:
+    encode: 0.343590537
+    generate: 1.402838327
+    decode: 0.000742532
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Identify the object located at coordinates [0.0, 0.0, 1.0, 0.62] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'table with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.0, 0.0, 1.0, 0.62] (x1, y1, x2, y2) relative
+    to the image size is a fork.
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 48
+  t_total_s: 2.204343222
+  tokens_per_s: 21.77519340951343
+  phase_times:
+    encode: 0.344673575
+    generate: 1.859669647
+    decode: 0.000883159
+idx: 8
+sample:
+  idx: 8
+  user_prompt: Identify the object located at coordinates [0.78, 0.0, 0.95, 0.15]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'glass (drink container) with attributes: pattern marking, material, transparency'
+  pred: The object located at coordinates [0.78, 0.0, 0.95, 0.15] (x1, y1, x2, y2)
+    relative to the image size is a sandwich.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 50
+  t_total_s: 2.291515187
+  tokens_per_s: 21.81962410009548
+  phase_times:
+    encode: 0.346680997
+    generate: 1.94483419
+    decode: 0.0009327
+idx: 9
+sample:
+  idx: 9
+  user_prompt: Identify the object located at coordinates [0.65, 0.0, 0.74, 0.02]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: glass (drink container)
+  pred: The object located at coordinates [0.65, 0.0, 0.74, 0.02] (x1, y1, x2, y2)
+    relative to the image size is a slice of bread.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 52
+  t_total_s: 2.353937129
+  tokens_per_s: 22.09064947375661
+  phase_times:
+    encode: 0.344270122
+    generate: 2.009667007
+    decode: 0.000941266
+idx: 10
+sample:
+  idx: 10
+  user_prompt: Identify the object located at coordinates [0.29, 0.54, 0.39, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'chair with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.29, 0.54, 0.39, 0.68] is a book.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 33
+  t_total_s: 1.761002124
+  tokens_per_s: 18.739330038423056
+  phase_times:
+    encode: 0.376134993
+    generate: 1.384867131
+    decode: 0.000732364
+idx: 11
+sample:
+  idx: 11
+  user_prompt: Identify the object located at coordinates [0.85, 0.0, 1.0, 0.34] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: The object is a couch.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 6
+  t_total_s: 0.814343807
+  tokens_per_s: 7.367895412754088
+  phase_times:
+    encode: 0.342315967
+    generate: 0.47202784
+    decode: 0.000657778
+idx: 12
+sample:
+  idx: 12
+  user_prompt: Identify the object located at coordinates [0.52, 0.14, 0.67, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.847582402
+  tokens_per_s: 7.078957734188539
+  phase_times:
+    encode: 0.377089658
+    generate: 0.470492744
+    decode: 0.000716743
+idx: 13
+sample:
+  idx: 13
+  user_prompt: Identify the object located at coordinates [0.15, 0.49, 0.23, 0.59]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.847885452
+  tokens_per_s: 7.076427583286333
+  phase_times:
+    encode: 0.376177286
+    generate: 0.471708166
+    decode: 0.000725042
+idx: 14
+sample:
+  idx: 14
+  user_prompt: Identify the object located at coordinates [0.0, 0.58, 0.08, 0.73]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.8435309449999999
+  tokens_per_s: 7.112957782479457
+  phase_times:
+    encode: 0.374044553
+    generate: 0.469486392
+    decode: 0.000713444
+idx: 15
+sample:
+  idx: 15
+  user_prompt: Identify the object located at coordinates [0.06, 0.5, 0.16, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.846063682
+  tokens_per_s: 7.091664761944006
+  phase_times:
+    encode: 0.37412485
+    generate: 0.471938832
+    decode: 0.000718679
+idx: 16
+sample:
+  idx: 16
+  user_prompt: Identify the object located at coordinates [0.0, 0.56, 0.08, 0.7] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 6
+  t_total_s: 0.84904845
+  tokens_per_s: 7.066734530873945
+  phase_times:
+    encode: 0.378965723
+    generate: 0.470082727
+    decode: 0.000735727
+idx: 17
+sample:
+  idx: 17
+  user_prompt: Identify the object located at coordinates [0.1, 0.61, 0.17, 0.65]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.8478576689999999
+  tokens_per_s: 7.076659467003064
+  phase_times:
+    encode: 0.374832088
+    generate: 0.473025581
+    decode: 0.000703152
+idx: 18
+sample:
+  idx: 18
+  user_prompt: Identify the object located at coordinates [0.08, 0.58, 0.16, 0.67]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.849323684
+  tokens_per_s: 7.064444466851816
+  phase_times:
+    encode: 0.376661735
+    generate: 0.472661949
+    decode: 0.000805818
+idx: 19
+sample:
+  idx: 19
+  user_prompt: Identify the object located at coordinates [0.17, 0.6, 0.24, 0.64]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.855122925
+  tokens_per_s: 7.016535078860153
+  phase_times:
+    encode: 0.384341834
+    generate: 0.470781091
+    decode: 0.000707183
+idx: 20
+sample:
+  idx: 20
+  user_prompt: Identify the object located at coordinates [0.06, 0.56, 0.16, 0.69]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.849920704
+  tokens_per_s: 7.059482104344642
+  phase_times:
+    encode: 0.375964896
+    generate: 0.473955808
+    decode: 0.000718646
+idx: 21
+sample:
+  idx: 21
+  user_prompt: Identify the object located at coordinates [0.76, 0.9, 0.95, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 6
+  t_total_s: 0.847278296
+  tokens_per_s: 7.081498521000707
+  phase_times:
+    encode: 0.373763595
+    generate: 0.473514701
+    decode: 0.000735567
+idx: 22
+sample:
+  idx: 22
+  user_prompt: Identify the object located at coordinates [0.07, 0.54, 0.16, 0.63]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.851532264
+  tokens_per_s: 7.046121742722364
+  phase_times:
+    encode: 0.378437637
+    generate: 0.473094627
+    decode: 0.000718291
+idx: 23
+sample:
+  idx: 23
+  user_prompt: Identify the object located at coordinates [0.89, 0.93, 0.99, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.847283861
+  tokens_per_s: 7.0814520093874425
+  phase_times:
+    encode: 0.376011569
+    generate: 0.471272292
+    decode: 0.000728834
+idx: 24
+sample:
+  idx: 24
+  user_prompt: Identify the object located at coordinates [0.16, 0.61, 0.24, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.846022775
+  tokens_per_s: 7.092007659013671
+  phase_times:
+    encode: 0.378792344
+    generate: 0.467230431
+    decode: 0.000742155
+idx: 25
+sample:
+  idx: 25
+  user_prompt: Identify the object located at coordinates [0.15, 0.52, 0.23, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.833137016
+  tokens_per_s: 7.201696581442014
+  phase_times:
+    encode: 0.380800075
+    generate: 0.452336941
+    decode: 0.000749641
+idx: 26
+sample:
+  idx: 26
+  user_prompt: Identify the object located at coordinates [0.21, 0.63, 0.53, 0.76]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.854683268
+  tokens_per_s: 7.020144449581058
+  phase_times:
+    encode: 0.377155889
+    generate: 0.477527379
+    decode: 0.000770074
+idx: 27
+sample:
+  idx: 27
+  user_prompt: Identify the object located at coordinates [0.04, 0.83, 0.36, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'napkin with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.04, 0.83, 0.36, 1.0] is a cup of tea.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.956549646
+  tokens_per_s: 17.377529913186777
+  phase_times:
+    encode: 0.463708071
+    generate: 1.492841575
+    decode: 0.00085688
+idx: 28
+sample:
+  idx: 28
+  user_prompt: Identify the object located at coordinates [0.04, 0.0, 0.31, 0.07]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: The object located at coordinates [0.04, 0.0, 0.31, 0.07] is a cup of tea.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.9625538820000001
+  tokens_per_s: 17.324365110093826
+  phase_times:
+    encode: 0.471920882
+    generate: 1.490633
+    decode: 0.000786589
+idx: 29
+sample:
+  idx: 29
+  user_prompt: Identify the object located at coordinates [0.33, 0.56, 0.79, 0.73]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: The object located at coordinates [0.33, 0.56, 0.79, 0.73] is a cup of tea.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 2.006362254
+  tokens_per_s: 17.444506808390148
+  phase_times:
+    encode: 0.47731868
+    generate: 1.529043574
+    decode: 0.000729297
+idx: 30
+sample:
+  idx: 30
+  user_prompt: Identify the object located at coordinates [0.82, 0.52, 0.99, 0.7]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'mug with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.82, 0.52, 0.99, 0.7] is a cup of tea.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.975036204
+  tokens_per_s: 17.214874305159825
+  phase_times:
+    encode: 0.473984157
+    generate: 1.501052047
+    decode: 0.00084783
+idx: 31
+sample:
+  idx: 31
+  user_prompt: Identify the object located at coordinates [0.14, 0.6, 0.36, 0.78]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: mug
+  pred: The object located at coordinates [0.14, 0.6, 0.36, 0.78] is a cup of tea.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.974207163
+  tokens_per_s: 17.222103453587764
+  phase_times:
+    encode: 0.475122055
+    generate: 1.499085108
+    decode: 0.000844849
+idx: 32
+sample:
+  idx: 32
+  user_prompt: Identify the object located at coordinates [0.71, 0.51, 0.8, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'table with attributes: color, pattern marking, material, transparency'
+  pred: The object is a red carpet. Its coordinates are [0.71, 0.51, 0.8, 0.68].
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.704507413
+  tokens_per_s: 19.360432080444113
+  phase_times:
+    encode: 0.341853253
+    generate: 1.36265416
+    decode: 0.000815331
+idx: 33
+sample:
+  idx: 33
+  user_prompt: Identify the object located at coordinates [0.86, 0.14, 0.98, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: The object is a red carpet. Its coordinates are [0.86, 0.14, 0.98, 0.38].
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.75341375
+  tokens_per_s: 19.3907456240719
+  phase_times:
+    encode: 0.34875431
+    generate: 1.40465944
+    decode: 0.000791622
+idx: 34
+sample:
+  idx: 34
+  user_prompt: Identify the object located at coordinates [0.31, 0.78, 0.44, 0.86]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'shoe with attributes: color, pattern marking, material, transparency'
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.865094269
+  tokens_per_s: 8.091603713999405
+  phase_times:
+    encode: 0.359311633
+    generate: 0.505782636
+    decode: 0.000751199
+idx: 35
+sample:
+  idx: 35
+  user_prompt: Identify the object located at coordinates [0.85, 0.46, 0.91, 0.49]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.862419516
+  tokens_per_s: 8.116699437028974
+  phase_times:
+    encode: 0.357320333
+    generate: 0.505099183
+    decode: 0.00074215
+idx: 36
+sample:
+  idx: 36
+  user_prompt: Identify the object located at coordinates [0.66, 0.46, 0.7, 0.48]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.8608385199999999
+  tokens_per_s: 8.13160637839487
+  phase_times:
+    encode: 0.355711763
+    generate: 0.505126757
+    decode: 0.000742133
+idx: 37
+sample:
+  idx: 37
+  user_prompt: Identify the object located at coordinates [0.64, 0.75, 0.71, 0.85]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.863895361
+  tokens_per_s: 8.10283318560383
+  phase_times:
+    encode: 0.358030199
+    generate: 0.505865162
+    decode: 0.000747353
+idx: 38
+sample:
+  idx: 38
+  user_prompt: Identify the object located at coordinates [0.93, 0.44, 0.98, 0.48]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.882134309
+  tokens_per_s: 7.935299566723915
+  phase_times:
+    encode: 0.358205642
+    generate: 0.523928667
+    decode: 0.000828847
+idx: 39
+sample:
+  idx: 39
+  user_prompt: Identify the object located at coordinates [0.64, 0.3, 0.66, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: watch
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.8665812690000001
+  tokens_per_s: 8.077719021180458
+  phase_times:
+    encode: 0.358197292
+    generate: 0.508383977
+    decode: 0.000722056
+idx: 40
+sample:
+  idx: 40
+  user_prompt: Identify the object located at coordinates [0.06, 0.32, 0.08, 0.33]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: watch
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.869553551
+  tokens_per_s: 8.050108003066507
+  phase_times:
+    encode: 0.361440474
+    generate: 0.508113077
+    decode: 0.000750173
+idx: 41
+sample:
+  idx: 41
+  user_prompt: Identify the object located at coordinates [0.97, 0.02, 1.0, 0.05]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.865021024
+  tokens_per_s: 8.09228886441493
+  phase_times:
+    encode: 0.360397955
+    generate: 0.504623069
+    decode: 0.00071898
+idx: 42
+sample:
+  idx: 42
+  user_prompt: Identify the object located at coordinates [0.89, 0.08, 0.96, 0.11]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.868672682
+  tokens_per_s: 8.058271136008855
+  phase_times:
+    encode: 0.360118327
+    generate: 0.508554355
+    decode: 0.000735471
+idx: 43
+sample:
+  idx: 43
+  user_prompt: Identify the object located at coordinates [0.5, 0.23, 0.57, 0.26]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.873791941
+  tokens_per_s: 8.011060381249271
+  phase_times:
+    encode: 0.360942725
+    generate: 0.512849216
+    decode: 0.000743033
+idx: 44
+sample:
+  idx: 44
+  user_prompt: Identify the object located at coordinates [0.4, 0.0, 0.45, 0.02] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 7
+  t_total_s: 0.863028336
+  tokens_per_s: 8.110973542820036
+  phase_times:
+    encode: 0.358312694
+    generate: 0.504715642
+    decode: 0.000711554
+idx: 45
+sample:
+  idx: 45
+  user_prompt: Identify the object located at coordinates [0.37, 0.21, 0.46, 0.25]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.919727047
+  tokens_per_s: 7.61095373114541
+  phase_times:
+    encode: 0.393873139
+    generate: 0.525853908
+    decode: 0.000774299
+idx: 46
+sample:
+  idx: 46
+  user_prompt: Identify the object located at coordinates [0.12, 0.0, 0.17, 0.03]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.869062437
+  tokens_per_s: 8.054657182243398
+  phase_times:
+    encode: 0.360833256
+    generate: 0.508229181
+    decode: 0.000719111
+idx: 47
+sample:
+  idx: 47
+  user_prompt: Identify the object located at coordinates [0.0, 0.16, 0.74, 0.32]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'knife with attributes: color'
+  pred: The object is a cupcake.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.8945083309999999
+  tokens_per_s: 8.943460583599641
+  phase_times:
+    encode: 0.37646545
+    generate: 0.518042881
+    decode: 0.000725301
+idx: 48
+sample:
+  idx: 48
+  user_prompt: Identify the object located at coordinates [0.0, 0.74, 0.05, 0.98]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: cup
+  pred: The object is a cat food container.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.9122515809999999
+  tokens_per_s: 8.769510699264002
+  phase_times:
+    encode: 0.37403917
+    generate: 0.538212411
+    decode: 0.000767956
+idx: 49
+sample:
+  idx: 49
+  user_prompt: Identify the object located at coordinates [0.14, 0.83, 0.42, 0.94]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color'
+  pred: The object located at coordinates [0.14, 0.83, 0.42, 0.94] is a cake.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 33
+  t_total_s: 1.740524078
+  tokens_per_s: 18.959806656578756
+  phase_times:
+    encode: 0.38264023
+    generate: 1.357883848
+    decode: 0.000872066
+idx: 50
+sample:
+  idx: 50
+  user_prompt: Identify the object located at coordinates [0.44, 0.8, 0.52, 0.84]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: The object located at coordinates [0.44, 0.8, 0.52, 0.84] is a cake.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 32
+  t_total_s: 1.702851085
+  tokens_per_s: 18.792013160681048
+  phase_times:
+    encode: 0.375683892
+    generate: 1.327167193
+    decode: 0.000749562
+idx: 51
+sample:
+  idx: 51
+  user_prompt: Identify the object located at coordinates [0.53, 0.28, 0.61, 0.45]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'cellular telephone with attributes: color, pattern marking, material, transparency'
+  pred: The object is a digital camera.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.8464265160000001
+  tokens_per_s: 8.270062276735196
+  phase_times:
+    encode: 0.340556583
+    generate: 0.505869933
+    decode: 0.00074874
+idx: 52
+sample:
+  idx: 52
+  user_prompt: Identify the object located at coordinates [0.09, 0.48, 0.6, 0.83]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.09, 0.48, 0.6, 0.83] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.773104389
+  tokens_per_s: 19.17540795168603
+  phase_times:
+    encode: 0.374887663
+    generate: 1.398216726
+    decode: 0.00083822
+idx: 53
+sample:
+  idx: 53
+  user_prompt: Identify the object located at coordinates [0.63, 0.31, 0.7, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.63, 0.31, 0.7, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.77318478
+  tokens_per_s: 19.174538594900415
+  phase_times:
+    encode: 0.374345704
+    generate: 1.398839076
+    decode: 0.000759071
+idx: 54
+sample:
+  idx: 54
+  user_prompt: Identify the object located at coordinates [0.49, 0.31, 0.51, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.49, 0.31, 0.51, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.8232457279999998
+  tokens_per_s: 19.196534763524756
+  phase_times:
+    encode: 0.375473193
+    generate: 1.447772535
+    decode: 0.00087602
+idx: 55
+sample:
+  idx: 55
+  user_prompt: Identify the object located at coordinates [0.0, 0.48, 0.1, 0.59] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.0, 0.48, 0.1, 0.59] is a table with apples.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 33
+  t_total_s: 1.738334766
+  tokens_per_s: 18.9836852172811
+  phase_times:
+    encode: 0.375312639
+    generate: 1.363022127
+    decode: 0.000843042
+idx: 56
+sample:
+  idx: 56
+  user_prompt: Identify the object located at coordinates [0.0, 0.66, 0.09, 0.75]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.0, 0.66, 0.09, 0.75] (x1, y1, x2, y2)
+    is a table with apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 47
+  t_total_s: 2.192008481
+  tokens_per_s: 21.441522880677216
+  phase_times:
+    encode: 0.374135287
+    generate: 1.817873194
+    decode: 0.000951845
+idx: 57
+sample:
+  idx: 57
+  user_prompt: Identify the object located at coordinates [0.53, 0.33, 0.57, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.53, 0.33, 0.57, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.831282592
+  tokens_per_s: 19.112287831980876
+  phase_times:
+    encode: 0.377820002
+    generate: 1.45346259
+    decode: 0.000828938
+idx: 58
+sample:
+  idx: 58
+  user_prompt: Identify the object located at coordinates [0.78, 0.55, 0.99, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.78, 0.55, 0.99, 0.62] (x1, y1, x2, y2)
+    relative to the image size is a table with apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 53
+  t_total_s: 2.427059428
+  tokens_per_s: 21.837124953991854
+  phase_times:
+    encode: 0.379314929
+    generate: 2.047744499
+    decode: 0.000837745
+idx: 59
+sample:
+  idx: 59
+  user_prompt: Identify the object located at coordinates [0.17, 0.69, 0.45, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.17, 0.69, 0.45, 1.0] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.797880881
+  tokens_per_s: 18.911152768413025
+  phase_times:
+    encode: 0.377170859
+    generate: 1.420710022
+    decode: 0.000829599
+idx: 60
+sample:
+  idx: 60
+  user_prompt: Identify the object located at coordinates [0.36, 0.26, 0.45, 0.33]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.36, 0.26, 0.45, 0.33] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.8112397530000002
+  tokens_per_s: 19.323780820307558
+  phase_times:
+    encode: 0.378413912
+    generate: 1.432825841
+    decode: 0.000836383
+idx: 61
+sample:
+  idx: 61
+  user_prompt: Identify the object located at coordinates [0.53, 0.48, 0.66, 0.52]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.53, 0.48, 0.66, 0.52] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.79122037
+  tokens_per_s: 19.539750991107812
+  phase_times:
+    encode: 0.375653792
+    generate: 1.415566578
+    decode: 0.000859194
+idx: 62
+sample:
+  idx: 62
+  user_prompt: Identify the object located at coordinates [0.1, 0.76, 0.13, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.1, 0.76, 0.13, 1.0] is a table with apples.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 33
+  t_total_s: 1.7334412010000002
+  tokens_per_s: 19.03727682309773
+  phase_times:
+    encode: 0.377895824
+    generate: 1.355545377
+    decode: 0.000824373
+idx: 63
+sample:
+  idx: 63
+  user_prompt: Identify the object located at coordinates [0.45, 0.32, 0.47, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.45, 0.32, 0.47, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.8156904859999998
+  tokens_per_s: 19.27641317166653
+  phase_times:
+    encode: 0.376680327
+    generate: 1.439010159
+    decode: 0.000843243
+idx: 64
+sample:
+  idx: 64
+  user_prompt: Identify the object located at coordinates [0.13, 0.89, 0.16, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.13, 0.89, 0.16, 1.0] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.7860354100000002
+  tokens_per_s: 19.036576660033855
+  phase_times:
+    encode: 0.381360786
+    generate: 1.404674624
+    decode: 0.000879247
+idx: 65
+sample:
+  idx: 65
+  user_prompt: Identify the object located at coordinates [0.55, 0.44, 0.67, 0.5]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.55, 0.44, 0.67, 0.5] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.783846364
+  tokens_per_s: 19.059937383710697
+  phase_times:
+    encode: 0.377172389
+    generate: 1.406673975
+    decode: 0.000763993
+idx: 66
+sample:
+  idx: 66
+  user_prompt: Identify the object located at coordinates [0.5, 0.29, 0.61, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.5, 0.29, 0.61, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.77756363
+  tokens_per_s: 19.127304039180864
+  phase_times:
+    encode: 0.382570055
+    generate: 1.394993575
+    decode: 0.000936877
+idx: 67
+sample:
+  idx: 67
+  user_prompt: Identify the object located at coordinates [0.11, 0.52, 0.66, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.11, 0.52, 0.66, 1.0] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.794221651
+  tokens_per_s: 18.94972116797848
+  phase_times:
+    encode: 0.382336
+    generate: 1.411885651
+    decode: 0.000848422
+idx: 68
+sample:
+  idx: 68
+  user_prompt: Identify the object located at coordinates [0.6, 0.32, 0.63, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.6, 0.32, 0.63, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.773412174
+  tokens_per_s: 19.17207995889172
+  phase_times:
+    encode: 0.373928439
+    generate: 1.399483735
+    decode: 0.00083535
+idx: 69
+sample:
+  idx: 69
+  user_prompt: Identify the object located at coordinates [0.62, 0.51, 0.75, 0.54]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.62, 0.51, 0.75, 0.54] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.8193727629999998
+  tokens_per_s: 19.237399125557868
+  phase_times:
+    encode: 0.377477111
+    generate: 1.441895652
+    decode: 0.000905405
+idx: 70
+sample:
+  idx: 70
+  user_prompt: Identify the object located at coordinates [0.36, 0.34, 0.38, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.36, 0.34, 0.38, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.809373886
+  tokens_per_s: 19.34370793721072
+  phase_times:
+    encode: 0.378810148
+    generate: 1.430563738
+    decode: 0.000742191
+idx: 71
+sample:
+  idx: 71
+  user_prompt: Identify the object located at coordinates [0.33, 0.34, 0.35, 0.37]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.33, 0.34, 0.35, 0.37] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.811595532
+  tokens_per_s: 19.31998582562192
+  phase_times:
+    encode: 0.375980867
+    generate: 1.435614665
+    decode: 0.000799959
+idx: 72
+sample:
+  idx: 72
+  user_prompt: Identify the object located at coordinates [0.57, 0.33, 0.6, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.57, 0.33, 0.6, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.779763447
+  tokens_per_s: 19.10366237564379
+  phase_times:
+    encode: 0.379373603
+    generate: 1.400389844
+    decode: 0.000809365
+idx: 73
+sample:
+  idx: 73
+  user_prompt: Identify the object located at coordinates [0.0, 0.58, 0.08, 0.67]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.0, 0.58, 0.08, 0.67] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 1.7866276440000002
+  tokens_per_s: 19.03026638716892
+  phase_times:
+    encode: 0.379335713
+    generate: 1.407291931
+    decode: 0.000756188
+idx: 74
+sample:
+  idx: 74
+  user_prompt: Identify the object located at coordinates [0.43, 0.31, 0.45, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.43, 0.31, 0.45, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.814650061
+  tokens_per_s: 19.28746525416175
+  phase_times:
+    encode: 0.376894046
+    generate: 1.437756015
+    decode: 0.000803752
+idx: 75
+sample:
+  idx: 75
+  user_prompt: Identify the object located at coordinates [0.5, 0.0, 0.54, 0.21] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'mirror with attributes: color, pattern marking, material, transparency'
+  pred: The object is a glass shower enclosure.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 8
+  t_total_s: 0.915064152
+  tokens_per_s: 8.742556445375865
+  phase_times:
+    encode: 0.374497219
+    generate: 0.540566933
+    decode: 0.000755008
+idx: 76
+sample:
+  idx: 76
+  user_prompt: Identify the object located at coordinates [0.56, 0.0, 0.59, 0.19]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: mirror
+  pred: The object is a glass shower enclosure.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.9235334420000001
+  tokens_per_s: 8.662382579969421
+  phase_times:
+    encode: 0.377955581
+    generate: 0.545577861
+    decode: 0.000749794
+idx: 77
+sample:
+  idx: 77
+  user_prompt: Identify the object located at coordinates [0.56, 0.26, 0.58, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: soap
+  pred: The object located at coordinates [0.56, 0.26, 0.58, 0.31] is a glass shower
+    enclosure.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 1.81022869
+  tokens_per_s: 19.33457368858738
+  phase_times:
+    encode: 0.37730967
+    generate: 1.43291902
+    decode: 0.00086926
+idx: 78
+sample:
+  idx: 78
+  user_prompt: Identify the object located at coordinates [0.75, 0.47, 0.76, 0.5]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: cellular telephone
+  pred: The object is a camera. Its coordinates are [0.75, 0.47, 0.76, 0.5].
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 32
+  t_total_s: 1.693527813
+  tokens_per_s: 18.89546764709674
+  phase_times:
+    encode: 0.373876473
+    generate: 1.31965134
+    decode: 0.000784475
+idx: 79
+sample:
+  idx: 79
+  user_prompt: Identify the object located at coordinates [0.59, 0.46, 0.68, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'bottle with attributes: color, pattern marking, material, transparency'
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.854726534
+  tokens_per_s: 7.019789091981085
+  phase_times:
+    encode: 0.379618344
+    generate: 0.47510819
+    decode: 0.000747831
+idx: 80
+sample:
+  idx: 80
+  user_prompt: Identify the object located at coordinates [0.26, 0.66, 0.31, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.8656133669999999
+  tokens_per_s: 6.931501093605456
+  phase_times:
+    encode: 0.389535661
+    generate: 0.476077706
+    decode: 0.00072319
+idx: 81
+sample:
+  idx: 81
+  user_prompt: Identify the object located at coordinates [0.41, 0.43, 0.51, 0.6]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.8637825480000001
+  tokens_per_s: 6.946192666073637
+  phase_times:
+    encode: 0.383981724
+    generate: 0.479800824
+    decode: 0.000743242
+idx: 82
+sample:
+  idx: 82
+  user_prompt: Identify the object located at coordinates [0.49, 0.45, 0.61, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.865356233
+  tokens_per_s: 6.9335607362523035
+  phase_times:
+    encode: 0.384181089
+    generate: 0.481175144
+    decode: 0.000731564
+idx: 83
+sample:
+  idx: 83
+  user_prompt: Identify the object located at coordinates [0.18, 0.38, 0.42, 0.6]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.866188637
+  tokens_per_s: 6.926897610641364
+  phase_times:
+    encode: 0.383816
+    generate: 0.482372637
+    decode: 0.000725875
+idx: 84
+sample:
+  idx: 84
+  user_prompt: Identify the object located at coordinates [0.31, 0.65, 0.39, 0.72]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.863162137
+  tokens_per_s: 6.951185348390693
+  phase_times:
+    encode: 0.38405081
+    generate: 0.479111327
+    decode: 0.000731272
+idx: 85
+sample:
+  idx: 85
+  user_prompt: Identify the object located at coordinates [0.22, 0.27, 0.33, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'jar with attributes: color, pattern marking, material, transparency'
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.858759123
+  tokens_per_s: 6.9868253382153584
+  phase_times:
+    encode: 0.381882634
+    generate: 0.476876489
+    decode: 0.000736198
+idx: 86
+sample:
+  idx: 86
+  user_prompt: Identify the object located at coordinates [0.14, 0.72, 0.7, 0.88]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'plastic bag with attributes: color, pattern marking, material, transparency'
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.863778017
+  tokens_per_s: 6.946229102748744
+  phase_times:
+    encode: 0.384946206
+    generate: 0.478831811
+    decode: 0.000736497
+idx: 87
+sample:
+  idx: 87
+  user_prompt: Identify the object located at coordinates [0.43, 0.63, 0.7, 0.74]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plastic bag
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.8660353430000001
+  tokens_per_s: 6.9281237174635715
+  phase_times:
+    encode: 0.386340903
+    generate: 0.47969444
+    decode: 0.000734793
+idx: 88
+sample:
+  idx: 88
+  user_prompt: Identify the object located at coordinates [0.43, 0.28, 0.62, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plastic bag
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.8610551040000001
+  tokens_per_s: 6.968195150492947
+  phase_times:
+    encode: 0.384150155
+    generate: 0.476904949
+    decode: 0.000764257
+idx: 89
+sample:
+  idx: 89
+  user_prompt: Identify the object located at coordinates [0.0, 0.0, 0.33, 0.77] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.0, 0.0, 0.33, 0.77] is a fried egg placed
+    on top of a plate.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 38
+  t_total_s: 1.863966621
+  tokens_per_s: 20.386631161674647
+  phase_times:
+    encode: 0.340168615
+    generate: 1.523798006
+    decode: 0.000850191
+idx: 90
+sample:
+  idx: 90
+  user_prompt: Identify the object located at coordinates [0.73, 0.36, 0.78, 0.44]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.73, 0.36, 0.78, 0.44] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.778307873
+  tokens_per_s: 19.119299034897768
+  phase_times:
+    encode: 0.377442836
+    generate: 1.400865037
+    decode: 0.000808086
+idx: 91
+sample:
+  idx: 91
+  user_prompt: Identify the object located at coordinates [0.78, 0.37, 0.8, 0.43]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.78, 0.37, 0.8, 0.43] is a food truck.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.7504834159999998
+  tokens_per_s: 18.851935241641847
+  phase_times:
+    encode: 0.376623673
+    generate: 1.373859743
+    decode: 0.000983318
+idx: 92
+sample:
+  idx: 92
+  user_prompt: Identify the object located at coordinates [0.32, 0.31, 0.38, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.32, 0.31, 0.38, 0.36] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.7942478739999999
+  tokens_per_s: 18.949444217092605
+  phase_times:
+    encode: 0.383295641
+    generate: 1.410952233
+    decode: 0.000827722
+idx: 93
+sample:
+  idx: 93
+  user_prompt: Identify the object located at coordinates [0.73, 0.43, 0.8, 0.51]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.73, 0.43, 0.8, 0.51] is a food truck.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.7395329679999998
+  tokens_per_s: 18.970609127311466
+  phase_times:
+    encode: 0.375184654
+    generate: 1.364348314
+    decode: 0.000819574
+idx: 94
+sample:
+  idx: 94
+  user_prompt: Identify the object located at coordinates [0.77, 0.3, 0.83, 0.37]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.77, 0.3, 0.83, 0.37] is a food truck.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.755091515
+  tokens_per_s: 18.80243834464666
+  phase_times:
+    encode: 0.376771843
+    generate: 1.378319672
+    decode: 0.000773916
+idx: 95
+sample:
+  idx: 95
+  user_prompt: Identify the object located at coordinates [0.64, 0.49, 0.68, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.64, 0.49, 0.68, 0.53] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.784137361
+  tokens_per_s: 19.056828663093054
+  phase_times:
+    encode: 0.376913936
+    generate: 1.407223425
+    decode: 0.000846286
+idx: 96
+sample:
+  idx: 96
+  user_prompt: Identify the object located at coordinates [0.64, 0.53, 0.69, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'bucket with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.64, 0.53, 0.69, 0.62] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.8410659710000001
+  tokens_per_s: 18.46756201872138
+  phase_times:
+    encode: 0.374485747
+    generate: 1.466580224
+    decode: 0.000809281
+idx: 97
+sample:
+  idx: 97
+  user_prompt: Identify the object located at coordinates [0.64, 0.49, 0.68, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: The object located at coordinates [0.64, 0.49, 0.68, 0.53] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.7751728469999999
+  tokens_per_s: 19.15306447902197
+  phase_times:
+    encode: 0.371304256
+    generate: 1.403868591
+    decode: 0.000821028
+idx: 98
+sample:
+  idx: 98
+  user_prompt: Identify the object located at coordinates [0.69, 0.49, 0.71, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: The object located at coordinates [0.69, 0.49, 0.71, 0.53] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.837812949
+  tokens_per_s: 18.500250538826734
+  phase_times:
+    encode: 0.374482903
+    generate: 1.463330046
+    decode: 0.00087638
+idx: 99
+sample:
+  idx: 99
+  user_prompt: Identify the object located at coordinates [0.69, 0.53, 0.74, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: The object located at coordinates [0.69, 0.53, 0.74, 0.62] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.7891564469999999
+  tokens_per_s: 19.003368909974366
+  phase_times:
+    encode: 0.383082826
+    generate: 1.406073621
+    decode: 0.000811955
+idx: 100
+sample:
+  idx: 100
+  user_prompt: Identify the object located at coordinates [0.69, 0.37, 0.72, 0.42]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: The object located at coordinates [0.69, 0.37, 0.72, 0.42] is a food truck.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.785645724
+  tokens_per_s: 19.040731060491144
+  phase_times:
+    encode: 0.379558698
+    generate: 1.406087026
+    decode: 0.000805443
+idx: 101
+sample:
+  idx: 101
+  user_prompt: Identify the object located at coordinates [0.87, 0.82, 0.9, 0.83]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object located at coordinates [0.87, 0.82, 0.9, 0.83] is a clock tower.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.706609337
+  tokens_per_s: 19.336587046927658
+  phase_times:
+    encode: 0.347535616
+    generate: 1.359073721
+    decode: 0.000864724
+idx: 102
+sample:
+  idx: 102
+  user_prompt: Identify the object located at coordinates [0.61, 0.7, 0.63, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object located at coordinates [0.61, 0.7, 0.63, 0.71] is a clock tower.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.7241515200000002
+  tokens_per_s: 19.13984914736496
+  phase_times:
+    encode: 0.35441074
+    generate: 1.36974078
+    decode: 0.000818572
+idx: 103
+sample:
+  idx: 103
+  user_prompt: Identify the object located at coordinates [0.89, 0.83, 0.91, 0.84]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object located at coordinates [0.89, 0.83, 0.91, 0.84] is a clock tower.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 1.754511018
+  tokens_per_s: 19.378618687021547
+  phase_times:
+    encode: 0.344247554
+    generate: 1.410263464
+    decode: 0.000723715
+idx: 104
+sample:
+  idx: 104
+  user_prompt: Identify the object located at coordinates [0.64, 0.7, 0.65, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object located at coordinates [0.64, 0.7, 0.65, 0.71] is a clock tower.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 1.7334646230000001
+  tokens_per_s: 19.037019597716935
+  phase_times:
+    encode: 0.348424602
+    generate: 1.385040021
+    decode: 0.000847705
+idx: 105
+sample:
+  idx: 105
+  user_prompt: Identify the object located at coordinates [0.34, 0.68, 0.43, 0.79]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'dog with attributes: color, pattern marking, material, transparency'
+  pred: The object is a surfboard.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 1.1321103799999999
+  tokens_per_s: 6.183142672006948
+  phase_times:
+    encode: 0.509418201
+    generate: 0.622692179
+    decode: 0.000741004
+idx: 106
+sample:
+  idx: 106
+  user_prompt: Identify the object located at coordinates [0.42, 0.6, 0.56, 0.78]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'handbag with attributes: color, pattern marking, material, transparency'
+  pred: The object is a person's head.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.9252233430000001
+  tokens_per_s: 8.646560920156118
+  phase_times:
+    encode: 0.37541805
+    generate: 0.549805293
+    decode: 0.000843342
+idx: 107
+sample:
+  idx: 107
+  user_prompt: Identify the object located at coordinates [0.56, 0.21, 0.6, 0.27]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: scarf
+  pred: The object is a person standing in the snow.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 10
+  t_total_s: 1.001897087
+  tokens_per_s: 9.98106505124513
+  phase_times:
+    encode: 0.381682684
+    generate: 0.620214403
+    decode: 0.000898932
+idx: 108
+sample:
+  idx: 108
+  user_prompt: Identify the object located at coordinates [0.49, 0.88, 0.68, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'handbag with attributes: color, pattern marking, material, transparency'
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.29551488
+  tokens_per_s: 15.43787748698031
+  phase_times:
+    encode: 0.349193852
+    generate: 0.946321028
+    decode: 0.000769672
+idx: 109
+sample:
+  idx: 109
+  user_prompt: Identify the object located at coordinates [0.6, 0.36, 0.63, 0.41]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: basket
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.289564879
+  tokens_per_s: 15.509107238954202
+  phase_times:
+    encode: 0.341427471
+    generate: 0.948137408
+    decode: 0.000831048
+idx: 110
+sample:
+  idx: 110
+  user_prompt: Identify the object located at coordinates [0.28, 0.83, 0.42, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'basket with attributes: color, pattern marking, material, transparency'
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.301049013
+  tokens_per_s: 15.372211039062522
+  phase_times:
+    encode: 0.346490595
+    generate: 0.954558418
+    decode: 0.000946735
+idx: 111
+sample:
+  idx: 111
+  user_prompt: Identify the object located at coordinates [0.75, 0.39, 0.82, 0.43]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: basket
+  pred: The object located at coordinates [0.75, 0.39, 0.82, 0.43] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 1.8993691990000001
+  tokens_per_s: 20.006642215745437
+  phase_times:
+    encode: 0.348277943
+    generate: 1.551091256
+    decode: 0.000828947
+idx: 112
+sample:
+  idx: 112
+  user_prompt: Identify the object located at coordinates [0.34, 0.85, 0.39, 0.93]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'book with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.34, 0.85, 0.39, 0.93] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 1.906846749
+  tokens_per_s: 19.9281877371258
+  phase_times:
+    encode: 0.343054026
+    generate: 1.563792723
+    decode: 0.000833531
+idx: 113
+sample:
+  idx: 113
+  user_prompt: Identify the object located at coordinates [0.09, 0.44, 0.15, 0.46]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 20
+  t_total_s: 1.294730163
+  tokens_per_s: 15.447234158551073
+  phase_times:
+    encode: 0.344899301
+    generate: 0.949830862
+    decode: 0.000876591
+idx: 114
+sample:
+  idx: 114
+  user_prompt: Identify the object located at coordinates [0.36, 0.85, 0.41, 0.94]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.36, 0.85, 0.41, 0.94] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 1.872201799
+  tokens_per_s: 20.296957315336925
+  phase_times:
+    encode: 0.340745063
+    generate: 1.531456736
+    decode: 0.000849607
+idx: 115
+sample:
+  idx: 115
+  user_prompt: Identify the object located at coordinates [0.34, 0.86, 0.4, 0.93]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.269549611
+  tokens_per_s: 15.753618312124393
+  phase_times:
+    encode: 0.338815752
+    generate: 0.930733859
+    decode: 0.000861595
+idx: 116
+sample:
+  idx: 116
+  user_prompt: Identify the object located at coordinates [0.41, 0.86, 0.49, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.41, 0.86, 0.49, 0.91] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 1.876427107
+  tokens_per_s: 20.251252957411044
+  phase_times:
+    encode: 0.343418966
+    generate: 1.533008141
+    decode: 0.000855572
+idx: 117
+sample:
+  idx: 117
+  user_prompt: Identify the object located at coordinates [0.55, 0.32, 0.56, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 20
+  t_total_s: 1.287864655
+  tokens_per_s: 15.529582182686736
+  phase_times:
+    encode: 0.342141406
+    generate: 0.945723249
+    decode: 0.000918188
+idx: 118
+sample:
+  idx: 118
+  user_prompt: Identify the object located at coordinates [0.33, 0.86, 0.37, 0.9]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.290670667
+  tokens_per_s: 15.495819740358288
+  phase_times:
+    encode: 0.341895718
+    generate: 0.948774949
+    decode: 0.000914697
+idx: 119
+sample:
+  idx: 119
+  user_prompt: Identify the object located at coordinates [0.33, 0.84, 0.39, 0.92]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.33, 0.84, 0.39, 0.92] is a dog lying
+    on a couch.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 37
+  t_total_s: 1.8550708779999998
+  tokens_per_s: 19.945329549828664
+  phase_times:
+    encode: 0.345177916
+    generate: 1.509892962
+    decode: 0.000853439
+idx: 120
+sample:
+  idx: 120
+  user_prompt: Identify the object located at coordinates [0.33, 0.23, 0.52, 0.4]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 20
+  t_total_s: 1.303157273
+  tokens_per_s: 15.347341732558476
+  phase_times:
+    encode: 0.343183028
+    generate: 0.959974245
+    decode: 0.000714781
+idx: 121
+sample:
+  idx: 121
+  user_prompt: Identify the object located at coordinates [0.29, 0.02, 0.74, 0.2]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color, pattern marking, material, transparency'
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.832318981
+  tokens_per_s: 7.208774684906531
+  phase_times:
+    encode: 0.349421987
+    generate: 0.482896994
+    decode: 0.000760518
+idx: 122
+sample:
+  idx: 122
+  user_prompt: Identify the object located at coordinates [0.0, 0.57, 0.35, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.8344529780000001
+  tokens_per_s: 7.190339250008644
+  phase_times:
+    encode: 0.350283772
+    generate: 0.484169206
+    decode: 0.000721645
+idx: 123
+sample:
+  idx: 123
+  user_prompt: Identify the object located at coordinates [0.58, 0.5, 0.72, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.831516844
+  tokens_per_s: 7.215728753174842
+  phase_times:
+    encode: 0.350067265
+    generate: 0.481449579
+    decode: 0.00072915
+idx: 124
+sample:
+  idx: 124
+  user_prompt: Identify the object located at coordinates [0.0, 0.97, 0.27, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 6
+  t_total_s: 0.824947509
+  tokens_per_s: 7.273190032749102
+  phase_times:
+    encode: 0.346889689
+    generate: 0.47805782
+    decode: 0.000717861
+idx: 125
+sample:
+  idx: 125
+  user_prompt: Identify the object located at coordinates [0.28, 0.5, 0.56, 0.66]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.827600711
+  tokens_per_s: 7.24987294023724
+  phase_times:
+    encode: 0.346108503
+    generate: 0.481492208
+    decode: 0.000738503
+idx: 126
+sample:
+  idx: 126
+  user_prompt: Identify the object located at coordinates [0.0, 0.01, 0.45, 0.2] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 6
+  t_total_s: 0.831160989
+  tokens_per_s: 7.218818110338429
+  phase_times:
+    encode: 0.347751562
+    generate: 0.483409427
+    decode: 0.00072549
+idx: 127
+sample:
+  idx: 127
+  user_prompt: Identify the object located at coordinates [0.0, 0.75, 0.29, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.833108067
+  tokens_per_s: 7.2019468273856
+  phase_times:
+    encode: 0.349131426
+    generate: 0.483976641
+    decode: 0.000722209
+idx: 0
+sample:
+  idx: 0
+  user_prompt: Identify the object located at coordinates [0.8, 0.55, 1.0, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'sweater with attributes: color, pattern marking, material, transparency'
+  pred: 'istant: The object located at coordinates [0.8, 0.55, 1.0, 1.0] relative
+    to the image size is a man standing in front of a whiteboard.'
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 43
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 48.85864167794846
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 1
+sample:
+  idx: 1
+  user_prompt: Identify the object located at coordinates [0.59, 0.6, 0.65, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'fan with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.59, 0.6, 0.65, 0.91] (x1, y1, x2, y2)
+    relative to the image size is a mannequin.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 52
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 59.084869005891164
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 2
+sample:
+  idx: 2
+  user_prompt: Identify the object located at coordinates [0.61, 0.97, 0.74, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: newspaper
+  pred: The object located at coordinates [0.61, 0.97, 0.74, 1.0] is a man wearing
+    a striped shirt.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 36
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 40.90490931177081
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 3
+sample:
+  idx: 3
+  user_prompt: Identify the object located at coordinates [0.61, 0.9, 0.77, 0.97]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'newspaper with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.61, 0.9, 0.77, 0.97] (x1, y1, x2, y2)
+    relative to the image size is a mannequin.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 52
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 59.084869005891164
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 4
+sample:
+  idx: 4
+  user_prompt: Identify the object located at coordinates [0.0, 0.36, 1.0, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'plate with attributes: color, pattern marking, material, transparency'
+  pred: 'istant: The object located at coordinates [0.0, 0.36, 1.0, 1.0] is a fork.'
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 32
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 36.35991938824072
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 5
+sample:
+  idx: 5
+  user_prompt: Identify the object located at coordinates [0.07, 0.0, 0.67, 0.32]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plate
+  pred: The object located at coordinates [0.07, 0.0, 0.67, 0.32] is a slice of bread.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 38.63241435000576
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 6
+sample:
+  idx: 6
+  user_prompt: Identify the object located at coordinates [0.0, 0.21, 0.04, 0.47]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plate
+  pred: The object located at coordinates [0.0, 0.21, 0.04, 0.47] is a slice of bread.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 38.63241435000576
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 7
+sample:
+  idx: 7
+  user_prompt: Identify the object located at coordinates [0.0, 0.0, 1.0, 0.62] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'table with attributes: color, pattern marking, material, transparency'
+  pred: 'istant: The object located at coordinates [0.0, 0.0, 1.0, 0.62] (x1, y1,
+    x2, y2) is a fork.'
+  n_images: 1
+  input_tokens: 62
+  output_tokens: 45
+  t_total_s: 0.8800899600000001
+  tokens_per_s: 51.13113663971351
+  phase_times:
+    encode: 2.796315155
+    generate: 4.244404525
+    decode: 0.00400166
+idx: 8
+sample:
+  idx: 8
+  user_prompt: Identify the object located at coordinates [0.78, 0.0, 0.95, 0.15]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'glass (drink container) with attributes: pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.78, 0.0, 0.95, 0.15] (x1, y1, x2,
+    y2) relative to the image size is a sandwich.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 51
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 61.10074704831373
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 9
+sample:
+  idx: 9
+  user_prompt: Identify the object located at coordinates [0.65, 0.0, 0.74, 0.02]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: glass (drink container)
+  pred: ': The object located at coordinates [0.65, 0.0, 0.74, 0.02] (x1, y1, x2,
+    y2) relative to the image size is a slice of bread.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 53
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 63.49685477569859
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 10
+sample:
+  idx: 10
+  user_prompt: Identify the object located at coordinates [0.29, 0.54, 0.39, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'chair with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.29, 0.54, 0.39, 0.68] is a book.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 33
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 39.53577750185006
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 11
+sample:
+  idx: 11
+  user_prompt: Identify the object located at coordinates [0.85, 0.0, 1.0, 0.34] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: 'istant: The object is a couch.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 8
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 9.584430909539408
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 12
+sample:
+  idx: 12
+  user_prompt: Identify the object located at coordinates [0.52, 0.14, 0.67, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 7.188323182154557
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 13
+sample:
+  idx: 13
+  user_prompt: Identify the object located at coordinates [0.15, 0.49, 0.23, 0.59]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 7.188323182154557
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 14
+sample:
+  idx: 14
+  user_prompt: Identify the object located at coordinates [0.0, 0.58, 0.08, 0.73]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object is a television.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 8.386377045846983
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 15
+sample:
+  idx: 15
+  user_prompt: Identify the object located at coordinates [0.06, 0.5, 0.16, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object is a television.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.8346870122500001
+  tokens_per_s: 8.386377045846983
+  phase_times:
+    encode: 2.938385497
+    generate: 3.739110601
+    decode: 0.003626052
+idx: 16
+sample:
+  idx: 16
+  user_prompt: Identify the object located at coordinates [0.0, 0.56, 0.08, 0.7] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object is a television.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 8
+  t_total_s: 0.646527566
+  tokens_per_s: 12.37379567509423
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 17
+sample:
+  idx: 17
+  user_prompt: Identify the object located at coordinates [0.1, 0.61, 0.17, 0.65]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object is a television.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.646527566
+  tokens_per_s: 10.827071215707452
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 18
+sample:
+  idx: 18
+  user_prompt: Identify the object located at coordinates [0.08, 0.58, 0.16, 0.67]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.646527566
+  tokens_per_s: 9.280346756320672
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 19
+sample:
+  idx: 19
+  user_prompt: Identify the object located at coordinates [0.17, 0.6, 0.24, 0.64]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object is a television.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.646527566
+  tokens_per_s: 10.827071215707452
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 20
+sample:
+  idx: 20
+  user_prompt: Identify the object located at coordinates [0.06, 0.56, 0.16, 0.69]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.646527566
+  tokens_per_s: 9.280346756320672
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 21
+sample:
+  idx: 21
+  user_prompt: Identify the object located at coordinates [0.76, 0.9, 0.95, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object is a television.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 8
+  t_total_s: 0.646527566
+  tokens_per_s: 12.37379567509423
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 22
+sample:
+  idx: 22
+  user_prompt: Identify the object located at coordinates [0.07, 0.54, 0.16, 0.63]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object is a television.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.646527566
+  tokens_per_s: 9.280346756320672
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 23
+sample:
+  idx: 23
+  user_prompt: Identify the object located at coordinates [0.89, 0.93, 0.99, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object is a television.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.646527566
+  tokens_per_s: 10.827071215707452
+  phase_times:
+    encode: 3.023836927
+    generate: 2.148383601
+    decode: 0.003216679
+idx: 24
+sample:
+  idx: 24
+  user_prompt: Identify the object located at coordinates [0.16, 0.61, 0.24, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'Identify the object located at coordinates [0.16, 0.61, 0.24, 0.68] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a television.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 66
+  t_total_s: 0.887615538875
+  tokens_per_s: 74.35651710610101
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 25
+sample:
+  idx: 25
+  user_prompt: Identify the object located at coordinates [0.15, 0.52, 0.23, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'Identify the object located at coordinates [0.15, 0.52, 0.23, 0.61] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a television.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 66
+  t_total_s: 0.887615538875
+  tokens_per_s: 74.35651710610101
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 26
+sample:
+  idx: 26
+  user_prompt: Identify the object located at coordinates [0.21, 0.63, 0.53, 0.76]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'Identify the object located at coordinates [0.21, 0.63, 0.53, 0.76] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a television.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 66
+  t_total_s: 0.887615538875
+  tokens_per_s: 74.35651710610101
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 27
+sample:
+  idx: 27
+  user_prompt: Identify the object located at coordinates [0.04, 0.83, 0.36, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'napkin with attributes: color, pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.04, 0.83, 0.36, 1.0] is a cup of tea.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.887615538875
+  tokens_per_s: 39.431486344144474
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 28
+sample:
+  idx: 28
+  user_prompt: Identify the object located at coordinates [0.04, 0.0, 0.31, 0.07]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: ': The object located at coordinates [0.04, 0.0, 0.31, 0.07] is a cup of tea.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.887615538875
+  tokens_per_s: 39.431486344144474
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 29
+sample:
+  idx: 29
+  user_prompt: Identify the object located at coordinates [0.33, 0.56, 0.79, 0.73]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: The object located at coordinates [0.33, 0.56, 0.79, 0.73] is a cup of tea.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.887615538875
+  tokens_per_s: 39.431486344144474
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 30
+sample:
+  idx: 30
+  user_prompt: Identify the object located at coordinates [0.82, 0.52, 0.99, 0.7]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'mug with attributes: color, pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.82, 0.52, 0.99, 0.7] is a cup of tea.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.887615538875
+  tokens_per_s: 39.431486344144474
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 31
+sample:
+  idx: 31
+  user_prompt: Identify the object located at coordinates [0.14, 0.6, 0.36, 0.78]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: mug
+  pred: ': The object located at coordinates [0.14, 0.6, 0.36, 0.78] is a cup of tea.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.887615538875
+  tokens_per_s: 39.431486344144474
+  phase_times:
+    encode: 3.502490348
+    generate: 3.598433963
+    decode: 0.005181598
+idx: 32
+sample:
+  idx: 32
+  user_prompt: Identify the object located at coordinates [0.71, 0.51, 0.8, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'table with attributes: color, pattern marking, material, transparency'
+  pred: 'istant: The object is a red carpet. Its coordinates are [0.71, 0.51, 0.8,
+    0.68].'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.746128145625
+  tokens_per_s: 46.90883222302515
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 33
+sample:
+  idx: 33
+  user_prompt: Identify the object located at coordinates [0.86, 0.14, 0.98, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: ': The object is a red carpet. Its coordinates are [0.86, 0.14, 0.98, 0.38].'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.746128145625
+  tokens_per_s: 46.90883222302515
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 34
+sample:
+  idx: 34
+  user_prompt: Identify the object located at coordinates [0.31, 0.78, 0.44, 0.86]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'shoe with attributes: color, pattern marking, material, transparency'
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.746128145625
+  tokens_per_s: 9.38176644460503
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 35
+sample:
+  idx: 35
+  user_prompt: Identify the object located at coordinates [0.85, 0.46, 0.91, 0.49]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.746128145625
+  tokens_per_s: 9.38176644460503
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 36
+sample:
+  idx: 36
+  user_prompt: Identify the object located at coordinates [0.66, 0.46, 0.7, 0.48]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: ': The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.746128145625
+  tokens_per_s: 10.72201879383432
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 37
+sample:
+  idx: 37
+  user_prompt: Identify the object located at coordinates [0.64, 0.75, 0.71, 0.85]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.746128145625
+  tokens_per_s: 9.38176644460503
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 38
+sample:
+  idx: 38
+  user_prompt: Identify the object located at coordinates [0.93, 0.44, 0.98, 0.48]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.746128145625
+  tokens_per_s: 9.38176644460503
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 39
+sample:
+  idx: 39
+  user_prompt: Identify the object located at coordinates [0.64, 0.3, 0.66, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: watch
+  pred: ': The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.746128145625
+  tokens_per_s: 10.72201879383432
+  phase_times:
+    encode: 2.804104682
+    generate: 3.164920483
+    decode: 0.0036794
+idx: 40
+sample:
+  idx: 40
+  user_prompt: Identify the object located at coordinates [0.06, 0.32, 0.08, 0.33]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: watch
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.635168055875
+  tokens_per_s: 11.020705363333933
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 41
+sample:
+  idx: 41
+  user_prompt: Identify the object located at coordinates [0.97, 0.02, 1.0, 0.05]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: ': The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.635168055875
+  tokens_per_s: 12.59509184381021
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 42
+sample:
+  idx: 42
+  user_prompt: Identify the object located at coordinates [0.89, 0.08, 0.96, 0.11]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.635168055875
+  tokens_per_s: 11.020705363333933
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 43
+sample:
+  idx: 43
+  user_prompt: Identify the object located at coordinates [0.5, 0.23, 0.57, 0.26]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: ': The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.635168055875
+  tokens_per_s: 12.59509184381021
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 44
+sample:
+  idx: 44
+  user_prompt: Identify the object located at coordinates [0.4, 0.0, 0.45, 0.02] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: 'istant: The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 9
+  t_total_s: 0.635168055875
+  tokens_per_s: 14.169478324286485
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 45
+sample:
+  idx: 45
+  user_prompt: Identify the object located at coordinates [0.37, 0.21, 0.46, 0.25]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: The object is a tennis ball.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.635168055875
+  tokens_per_s: 11.020705363333933
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 46
+sample:
+  idx: 46
+  user_prompt: Identify the object located at coordinates [0.12, 0.0, 0.17, 0.03]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: hat
+  pred: ': The object is a tennis ball.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 8
+  t_total_s: 0.635168055875
+  tokens_per_s: 12.59509184381021
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 47
+sample:
+  idx: 47
+  user_prompt: Identify the object located at coordinates [0.0, 0.16, 0.74, 0.32]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'knife with attributes: color'
+  pred: 'istant: The object is a cupcake.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 10
+  t_total_s: 0.635168055875
+  tokens_per_s: 15.743864804762762
+  phase_times:
+    encode: 2.852571906
+    generate: 2.228772541
+    decode: 0.00324563
+idx: 48
+sample:
+  idx: 48
+  user_prompt: Identify the object located at coordinates [0.0, 0.74, 0.05, 0.98]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: cup
+  pred: ': The object is a cat food container.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 9
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 11.634854294430676
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 49
+sample:
+  idx: 49
+  user_prompt: Identify the object located at coordinates [0.14, 0.83, 0.42, 0.94]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color'
+  pred: The object located at coordinates [0.14, 0.83, 0.42, 0.94] is a cake.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 33
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 42.66113241291248
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 50
+sample:
+  idx: 50
+  user_prompt: Identify the object located at coordinates [0.44, 0.8, 0.52, 0.84]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: napkin
+  pred: ': The object located at coordinates [0.44, 0.8, 0.52, 0.84] is a cake.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 33
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 42.66113241291248
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 51
+sample:
+  idx: 51
+  user_prompt: Identify the object located at coordinates [0.53, 0.28, 0.61, 0.45]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'cellular telephone with attributes: color, pattern marking, material, transparency'
+  pred: The object is a digital camera.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 9.049331117890526
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 52
+sample:
+  idx: 52
+  user_prompt: Identify the object located at coordinates [0.09, 0.48, 0.6, 0.83]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.09, 0.48, 0.6, 0.83] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 45.24665558945263
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 53
+sample:
+  idx: 53
+  user_prompt: Identify the object located at coordinates [0.63, 0.31, 0.7, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.63, 0.31, 0.7, 0.36] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 45.24665558945263
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 54
+sample:
+  idx: 54
+  user_prompt: Identify the object located at coordinates [0.49, 0.31, 0.51, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.49, 0.31, 0.51, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 45.24665558945263
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 55
+sample:
+  idx: 55
+  user_prompt: Identify the object located at coordinates [0.0, 0.48, 0.1, 0.59] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.0, 0.48, 0.1, 0.59] is a table
+    with apples.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 35
+  t_total_s: 0.7735378348749999
+  tokens_per_s: 45.24665558945263
+  phase_times:
+    encode: 3.002929902
+    generate: 3.185372777
+    decode: 0.003692714
+idx: 56
+sample:
+  idx: 56
+  user_prompt: Identify the object located at coordinates [0.0, 0.66, 0.09, 0.75]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.0, 0.66, 0.09, 0.75] (x1, y1, x2,
+    y2) is a table with apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 48
+  t_total_s: 0.824793661
+  tokens_per_s: 58.196373553360765
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 57
+sample:
+  idx: 57
+  user_prompt: Identify the object located at coordinates [0.53, 0.33, 0.57, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.53, 0.33, 0.57, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 58
+sample:
+  idx: 58
+  user_prompt: Identify the object located at coordinates [0.78, 0.55, 0.99, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.78, 0.55, 0.99, 0.62] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 59
+sample:
+  idx: 59
+  user_prompt: Identify the object located at coordinates [0.17, 0.69, 0.45, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.17, 0.69, 0.45, 1.0] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 60
+sample:
+  idx: 60
+  user_prompt: Identify the object located at coordinates [0.36, 0.26, 0.45, 0.33]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.36, 0.26, 0.45, 0.33] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 61
+sample:
+  idx: 61
+  user_prompt: Identify the object located at coordinates [0.53, 0.48, 0.66, 0.52]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.53, 0.48, 0.66, 0.52] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 62
+sample:
+  idx: 62
+  user_prompt: Identify the object located at coordinates [0.1, 0.76, 0.13, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.1, 0.76, 0.13, 1.0] is a table
+    with apples.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 63
+sample:
+  idx: 63
+  user_prompt: Identify the object located at coordinates [0.45, 0.32, 0.47, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.45, 0.32, 0.47, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.824793661
+  tokens_per_s: 42.43485571599222
+  phase_times:
+    encode: 2.987066222
+    generate: 3.611283066
+    decode: 0.004293495
+idx: 64
+sample:
+  idx: 64
+  user_prompt: Identify the object located at coordinates [0.13, 0.89, 0.16, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.13, 0.89, 0.16, 1.0] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 65
+sample:
+  idx: 65
+  user_prompt: Identify the object located at coordinates [0.55, 0.44, 0.67, 0.5]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.55, 0.44, 0.67, 0.5] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 66
+sample:
+  idx: 66
+  user_prompt: Identify the object located at coordinates [0.5, 0.29, 0.61, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.5, 0.29, 0.61, 0.36] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 67
+sample:
+  idx: 67
+  user_prompt: Identify the object located at coordinates [0.11, 0.52, 0.66, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.11, 0.52, 0.66, 1.0] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 68
+sample:
+  idx: 68
+  user_prompt: Identify the object located at coordinates [0.6, 0.32, 0.63, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.6, 0.32, 0.63, 0.36] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 69
+sample:
+  idx: 69
+  user_prompt: Identify the object located at coordinates [0.62, 0.51, 0.75, 0.54]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.62, 0.51, 0.75, 0.54] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 70
+sample:
+  idx: 70
+  user_prompt: Identify the object located at coordinates [0.36, 0.34, 0.38, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.36, 0.34, 0.38, 0.36] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 71
+sample:
+  idx: 71
+  user_prompt: Identify the object located at coordinates [0.33, 0.34, 0.35, 0.37]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: The object located at coordinates [0.33, 0.34, 0.35, 0.37] is a table with
+    apples.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7751718617500001
+  tokens_per_s: 45.15127770632084
+  phase_times:
+    encode: 3.023611324
+    generate: 3.17776357
+    decode: 0.003777177
+idx: 72
+sample:
+  idx: 72
+  user_prompt: Identify the object located at coordinates [0.57, 0.33, 0.6, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.57, 0.33, 0.6, 0.36] is a table
+    with apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 36
+  t_total_s: 0.76414240975
+  tokens_per_s: 47.11163722973825
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 73
+sample:
+  idx: 73
+  user_prompt: Identify the object located at coordinates [0.0, 0.58, 0.08, 0.67]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.0, 0.58, 0.08, 0.67] is a table
+    with apples.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 36
+  t_total_s: 0.76414240975
+  tokens_per_s: 47.11163722973825
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 74
+sample:
+  idx: 74
+  user_prompt: Identify the object located at coordinates [0.43, 0.31, 0.45, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.43, 0.31, 0.45, 0.36] is a table with
+    apples.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 36
+  t_total_s: 0.76414240975
+  tokens_per_s: 47.11163722973825
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 75
+sample:
+  idx: 75
+  user_prompt: Identify the object located at coordinates [0.5, 0.0, 0.54, 0.21] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'mirror with attributes: color, pattern marking, material, transparency'
+  pred: 'Assistant: The object is a glass shower enclosure.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 11
+  t_total_s: 0.76414240975
+  tokens_per_s: 14.395222486864464
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 76
+sample:
+  idx: 76
+  user_prompt: Identify the object located at coordinates [0.56, 0.0, 0.59, 0.19]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: mirror
+  pred: 'istant: The object is a glass shower enclosure.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 10
+  t_total_s: 0.76414240975
+  tokens_per_s: 13.086565897149514
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 77
+sample:
+  idx: 77
+  user_prompt: Identify the object located at coordinates [0.56, 0.26, 0.58, 0.31]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: soap
+  pred: ': The object located at coordinates [0.56, 0.26, 0.58, 0.31] is a glass shower
+    enclosure.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 36
+  t_total_s: 0.76414240975
+  tokens_per_s: 47.11163722973825
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 78
+sample:
+  idx: 78
+  user_prompt: Identify the object located at coordinates [0.75, 0.47, 0.76, 0.5]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: cellular telephone
+  pred: 'istant: The object is a camera. Its coordinates are [0.75, 0.47, 0.76, 0.5].'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 0.76414240975
+  tokens_per_s: 44.49432405030834
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 79
+sample:
+  idx: 79
+  user_prompt: Identify the object located at coordinates [0.59, 0.46, 0.68, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'bottle with attributes: color, pattern marking, material, transparency'
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.76414240975
+  tokens_per_s: 7.851939538289708
+  phase_times:
+    encode: 2.927604514
+    generate: 3.185534764
+    decode: 0.003778133
+idx: 80
+sample:
+  idx: 80
+  user_prompt: Identify the object located at coordinates [0.26, 0.66, 0.31, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.66019784025
+  tokens_per_s: 9.088184835212358
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 81
+sample:
+  idx: 81
+  user_prompt: Identify the object located at coordinates [0.41, 0.43, 0.51, 0.6]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: ': The object is a refrigerator.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.66019784025
+  tokens_per_s: 10.60288230774775
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 82
+sample:
+  idx: 82
+  user_prompt: Identify the object located at coordinates [0.49, 0.45, 0.61, 0.61]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.66019784025
+  tokens_per_s: 9.088184835212358
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 83
+sample:
+  idx: 83
+  user_prompt: Identify the object located at coordinates [0.18, 0.38, 0.42, 0.6]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: ': The object is a refrigerator.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.66019784025
+  tokens_per_s: 10.60288230774775
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 84
+sample:
+  idx: 84
+  user_prompt: Identify the object located at coordinates [0.31, 0.65, 0.39, 0.72]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bottle
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.66019784025
+  tokens_per_s: 9.088184835212358
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 85
+sample:
+  idx: 85
+  user_prompt: Identify the object located at coordinates [0.22, 0.27, 0.33, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'jar with attributes: color, pattern marking, material, transparency'
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.66019784025
+  tokens_per_s: 9.088184835212358
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 86
+sample:
+  idx: 86
+  user_prompt: Identify the object located at coordinates [0.14, 0.72, 0.7, 0.88]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'plastic bag with attributes: color, pattern marking, material, transparency'
+  pred: ': The object is a refrigerator.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.66019784025
+  tokens_per_s: 10.60288230774775
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 87
+sample:
+  idx: 87
+  user_prompt: Identify the object located at coordinates [0.43, 0.63, 0.7, 0.74]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plastic bag
+  pred: ': The object is a refrigerator.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 7
+  t_total_s: 0.66019784025
+  tokens_per_s: 10.60288230774775
+  phase_times:
+    encode: 3.116206218
+    generate: 2.165376504
+    decode: 0.003280505
+idx: 88
+sample:
+  idx: 88
+  user_prompt: Identify the object located at coordinates [0.43, 0.28, 0.62, 0.38]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: plastic bag
+  pred: The object is a refrigerator.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 6
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 7.607543042044588
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 89
+sample:
+  idx: 89
+  user_prompt: Identify the object located at coordinates [0.0, 0.0, 0.33, 0.77] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color, pattern marking, material, transparency'
+  pred: 'Assistant: The object located at coordinates [0.0, 0.0, 0.33, 0.77] is a
+    fried egg placed on top of a plate.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 41
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 51.98487745397136
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 90
+sample:
+  idx: 90
+  user_prompt: Identify the object located at coordinates [0.73, 0.36, 0.78, 0.44]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'box with attributes: color, pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.73, 0.36, 0.78, 0.44] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 91
+sample:
+  idx: 91
+  user_prompt: Identify the object located at coordinates [0.78, 0.37, 0.8, 0.43]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.78, 0.37, 0.8, 0.43] is a food
+    truck.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 92
+sample:
+  idx: 92
+  user_prompt: Identify the object located at coordinates [0.32, 0.31, 0.38, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.32, 0.31, 0.38, 0.36] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 93
+sample:
+  idx: 93
+  user_prompt: Identify the object located at coordinates [0.73, 0.43, 0.8, 0.51]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.73, 0.43, 0.8, 0.51] is a food
+    truck.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 94
+sample:
+  idx: 94
+  user_prompt: Identify the object located at coordinates [0.77, 0.3, 0.83, 0.37]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: 'istant: The object located at coordinates [0.77, 0.3, 0.83, 0.37] is a food
+    truck.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 95
+sample:
+  idx: 95
+  user_prompt: Identify the object located at coordinates [0.64, 0.49, 0.68, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: box
+  pred: ': The object located at coordinates [0.64, 0.49, 0.68, 0.53] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.7886909041250001
+  tokens_per_s: 44.37733441192677
+  phase_times:
+    encode: 3.012975813
+    generate: 3.29655142
+    decode: 0.003711226
+idx: 96
+sample:
+  idx: 96
+  user_prompt: Identify the object located at coordinates [0.64, 0.53, 0.69, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'bucket with attributes: color, pattern marking, material, transparency'
+  pred: ': The object located at coordinates [0.64, 0.53, 0.69, 0.62] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.763097262
+  tokens_per_s: 45.86571298692459
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 97
+sample:
+  idx: 97
+  user_prompt: Identify the object located at coordinates [0.64, 0.49, 0.68, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: ': The object located at coordinates [0.64, 0.49, 0.68, 0.53] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.763097262
+  tokens_per_s: 45.86571298692459
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 98
+sample:
+  idx: 98
+  user_prompt: Identify the object located at coordinates [0.69, 0.49, 0.71, 0.53]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: ': The object located at coordinates [0.69, 0.49, 0.71, 0.53] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.763097262
+  tokens_per_s: 45.86571298692459
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 99
+sample:
+  idx: 99
+  user_prompt: Identify the object located at coordinates [0.69, 0.53, 0.74, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: ': The object located at coordinates [0.69, 0.53, 0.74, 0.62] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.763097262
+  tokens_per_s: 45.86571298692459
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 100
+sample:
+  idx: 100
+  user_prompt: Identify the object located at coordinates [0.69, 0.37, 0.72, 0.42]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: bucket
+  pred: ': The object located at coordinates [0.69, 0.37, 0.72, 0.42] is a food truck.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 35
+  t_total_s: 0.763097262
+  tokens_per_s: 45.86571298692459
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 101
+sample:
+  idx: 101
+  user_prompt: Identify the object located at coordinates [0.87, 0.82, 0.9, 0.83]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: ': The object located at coordinates [0.87, 0.82, 0.9, 0.83] is a clock tower.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 0.763097262
+  tokens_per_s: 44.55526404444103
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 102
+sample:
+  idx: 102
+  user_prompt: Identify the object located at coordinates [0.61, 0.7, 0.63, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: ': The object located at coordinates [0.61, 0.7, 0.63, 0.71] is a clock tower.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 34
+  t_total_s: 0.763097262
+  tokens_per_s: 44.55526404444103
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 103
+sample:
+  idx: 103
+  user_prompt: Identify the object located at coordinates [0.89, 0.83, 0.91, 0.84]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: The object located at coordinates [0.89, 0.83, 0.91, 0.84] is a clock tower.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 34
+  t_total_s: 0.763097262
+  tokens_per_s: 44.55526404444103
+  phase_times:
+    encode: 2.960414988
+    generate: 3.144363108
+    decode: 0.003716702
+idx: 104
+sample:
+  idx: 104
+  user_prompt: Identify the object located at coordinates [0.64, 0.7, 0.65, 0.71]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: shoe
+  pred: 'Identify the object located at coordinates [0.64, 0.7, 0.65, 0.71] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object located at coordinates [0.64, 0.7, 0.65, 0.71] is a clock
+    tower.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 92
+  t_total_s: 0.822241678625
+  tokens_per_s: 111.88924423515932
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 105
+sample:
+  idx: 105
+  user_prompt: Identify the object located at coordinates [0.34, 0.68, 0.43, 0.79]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'dog with attributes: color, pattern marking, material, transparency'
+  pred: The object is a surfboard.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 7
+  t_total_s: 0.822241678625
+  tokens_per_s: 8.513312061370819
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 106
+sample:
+  idx: 106
+  user_prompt: Identify the object located at coordinates [0.42, 0.6, 0.56, 0.78]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'handbag with attributes: color, pattern marking, material, transparency'
+  pred: 'Identify the object located at coordinates [0.42, 0.6, 0.56, 0.78] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a person''s head.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 67
+  t_total_s: 0.822241678625
+  tokens_per_s: 81.48455830169212
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 107
+sample:
+  idx: 107
+  user_prompt: Identify the object located at coordinates [0.56, 0.21, 0.6, 0.27]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: scarf
+  pred: 'Identify the object located at coordinates [0.56, 0.21, 0.6, 0.27] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a person standing in the snow.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 69
+  t_total_s: 0.822241678625
+  tokens_per_s: 83.91693317636948
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 108
+sample:
+  idx: 108
+  user_prompt: Identify the object located at coordinates [0.49, 0.88, 0.68, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'handbag with attributes: color, pattern marking, material, transparency'
+  pred: 'Identify the object located at coordinates [0.49, 0.88, 0.68, 1.0] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a dog lying on a couch. Its position is in the center
+    of the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 79
+  t_total_s: 0.822241678625
+  tokens_per_s: 96.07880754975638
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 109
+sample:
+  idx: 109
+  user_prompt: Identify the object located at coordinates [0.6, 0.36, 0.63, 0.41]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: basket
+  pred: 'Identify the object located at coordinates [0.6, 0.36, 0.63, 0.41] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a dog lying on a couch. Its position is in the center
+    of the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 79
+  t_total_s: 0.822241678625
+  tokens_per_s: 96.07880754975638
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 110
+sample:
+  idx: 110
+  user_prompt: Identify the object located at coordinates [0.28, 0.83, 0.42, 1.0]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'basket with attributes: color, pattern marking, material, transparency'
+  pred: 'Identify the object located at coordinates [0.28, 0.83, 0.42, 1.0] (x1, y1,
+    x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object is a dog lying on a couch. Its position is in the center
+    of the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 79
+  t_total_s: 0.822241678625
+  tokens_per_s: 96.07880754975638
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 111
+sample:
+  idx: 111
+  user_prompt: Identify the object located at coordinates [0.75, 0.39, 0.82, 0.43]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: basket
+  pred: 'Identify the object located at coordinates [0.75, 0.39, 0.82, 0.43] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+
+    Assistant: The object located at coordinates [0.75, 0.39, 0.82, 0.43] is a dog
+    lying on a couch.'
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 97
+  t_total_s: 0.822241678625
+  tokens_per_s: 117.97018142185276
+  phase_times:
+    encode: 3.196144281
+    generate: 3.381789148
+    decode: 0.005012884
+idx: 112
+sample:
+  idx: 112
+  user_prompt: Identify the object located at coordinates [0.34, 0.85, 0.39, 0.93]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'book with attributes: color, pattern marking, material, transparency'
+  pred: The object located at coordinates [0.34, 0.85, 0.39, 0.93] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 0.760868160375
+  tokens_per_s: 49.94294935573515
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 113
+sample:
+  idx: 113
+  user_prompt: Identify the object located at coordinates [0.09, 0.44, 0.15, 0.46]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.09, 0.44, 0.15, 0.46] is a dog lying
+    on a couch.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 37
+  t_total_s: 0.760868160375
+  tokens_per_s: 48.628661214794754
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 114
+sample:
+  idx: 114
+  user_prompt: Identify the object located at coordinates [0.36, 0.85, 0.41, 0.94]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.36, 0.85, 0.41, 0.94] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 0.760868160375
+  tokens_per_s: 49.94294935573515
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 115
+sample:
+  idx: 115
+  user_prompt: Identify the object located at coordinates [0.34, 0.86, 0.4, 0.93]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: ': The object is a dog lying on a couch. Its position is in the center of
+    the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 21
+  t_total_s: 0.760868160375
+  tokens_per_s: 27.600050959748373
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 116
+sample:
+  idx: 116
+  user_prompt: Identify the object located at coordinates [0.41, 0.86, 0.49, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.41, 0.86, 0.49, 0.91] is a dog lying
+    on a sofa.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 38
+  t_total_s: 0.760868160375
+  tokens_per_s: 49.94294935573515
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 117
+sample:
+  idx: 117
+  user_prompt: Identify the object located at coordinates [0.55, 0.32, 0.56, 0.36]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object is a dog lying on a couch. Its position is in the center of the
+    image.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 20
+  t_total_s: 0.760868160375
+  tokens_per_s: 26.285762818807974
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 118
+sample:
+  idx: 118
+  user_prompt: Identify the object located at coordinates [0.33, 0.86, 0.37, 0.9]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: ': The object is a dog lying on a couch. Its position is in the center of
+    the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 21
+  t_total_s: 0.760868160375
+  tokens_per_s: 27.600050959748373
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 119
+sample:
+  idx: 119
+  user_prompt: Identify the object located at coordinates [0.33, 0.84, 0.39, 0.92]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: book
+  pred: The object located at coordinates [0.33, 0.84, 0.39, 0.92] is a dog lying
+    on a couch.
+  n_images: 1
+  input_tokens: 65
+  output_tokens: 37
+  t_total_s: 0.760868160375
+  tokens_per_s: 48.628661214794754
+  phase_times:
+    encode: 2.799900667
+    generate: 3.287044616
+    decode: 0.003807839
+idx: 120
+sample:
+  idx: 120
+  user_prompt: Identify the object located at coordinates [0.33, 0.23, 0.52, 0.4]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'television set with attributes: color, pattern marking, material, transparency'
+  pred: ': The object is a dog lying on a couch. Its position is in the center of
+    the image.'
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 21
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 30.539374583526204
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 121
+sample:
+  idx: 121
+  user_prompt: Identify the object located at coordinates [0.29, 0.02, 0.74, 0.2]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: 'tray with attributes: color, pattern marking, material, transparency'
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 8.725535595293202
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 122
+sample:
+  idx: 122
+  user_prompt: Identify the object located at coordinates [0.0, 0.57, 0.35, 0.68]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 8.725535595293202
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 123
+sample:
+  idx: 123
+  user_prompt: Identify the object located at coordinates [0.58, 0.5, 0.72, 0.62]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 8.725535595293202
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 124
+sample:
+  idx: 124
+  user_prompt: Identify the object located at coordinates [0.0, 0.97, 0.27, 1.0] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: ': The object is a scale.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 7
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 10.179791527842069
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 125
+sample:
+  idx: 125
+  user_prompt: Identify the object located at coordinates [0.28, 0.5, 0.56, 0.66]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 8.725535595293202
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 126
+sample:
+  idx: 126
+  user_prompt: Identify the object located at coordinates [0.0, 0.01, 0.45, 0.2] (x1,
+    y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: ': The object is a scale.'
+  n_images: 1
+  input_tokens: 63
+  output_tokens: 7
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 10.179791527842069
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588
+idx: 127
+sample:
+  idx: 127
+  user_prompt: Identify the object located at coordinates [0.0, 0.75, 0.29, 0.91]
+    (x1, y1, x2, y2) relative to the image size. Describe it and list its attributes.
+  gt: tray
+  pred: The object is a scale.
+  n_images: 1
+  input_tokens: 64
+  output_tokens: 6
+  t_total_s: 0.6876368716250001
+  tokens_per_s: 8.725535595293202
+  phase_times:
+    encode: 2.80254633
+    generate: 2.698548643
+    decode: 0.003349588

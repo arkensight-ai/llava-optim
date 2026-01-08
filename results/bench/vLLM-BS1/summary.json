@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "count": 128,
+    "latency_s": {
+      "mean": 0.1907498740390625,
+      "p50": 0.0471134525,
+      "p95": 0.6092709532499999,
+      "min": 0.034856415,
+      "max": 5.87161389,
+      "n": 128
+    },
+    "throughput": {
+      "tokens_per_s": {
+        "mean": 160.2720981504559,
+        "p50": 182.61992936631978,
+        "p95": 216.0521747200521,
+        "min": 1.703109262179363,
+        "max": 220.06446084174084,
+        "n": 128
+      },
+      "avg_output_tokens": 8.5390625,
+      "samples_per_s": 5.242467419900976
+    }
+  },
+  "meta": {
+    "model_id": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "backend": "vllm",
+    "batch_size": 1,
+    "timing": {
+      "total_wall_s": 66.98326745801023,
+      "load_time_s": 41.95082490101049,
+      "total_inference_s": 24.48645805500564,
+      "latency_per_img_s": 0.19130045355473158
+    }
+  }
+}
